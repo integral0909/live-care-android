@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/preMenuCardIv"
+        android:layout_width="@dimen/pre_menu_card_iv_size"
+        android:layout_height="@dimen/pre_menu_card_iv_size"
+        android:layout_marginStart="@dimen/pre_menu_card_iv_margin_start"
+        android:layout_marginTop="@dimen/pre_menu_card_iv_margin_top"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/preMenuCardTvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/pre_menu_card_tv_title_margin_start"
+        android:textAllCaps="true"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/pre_menu_card_tv_text_size"
+        android:fontFamily="@font/avenir_next_bold"
+        app:layout_constraintBottom_toBottomOf="@+id/preMenuCardIv"
+        app:layout_constraintStart_toEndOf="@+id/preMenuCardIv"
+        app:layout_constraintTop_toTopOf="@+id/preMenuCardIv" />
+
+    <ImageView
+        android:id="@+id/preMenuCardIvNext"
+        android:layout_width="@dimen/pre_menu_card_iv_next_width"
+        android:layout_height="@dimen/pre_menu_card_iv_next_height"
+        android:layout_marginEnd="@dimen/pre_menu_card_iv_next_margin_end"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/arrow_with_line_green"
+        app:layout_constraintBottom_toBottomOf="@+id/preMenuCardIv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/preMenuCardIv" />
+
+    <TextView
+        android:id="@+id/preMenuCardTvExplanation"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_margin="@dimen/pre_menu_card_tv_explanation_margin"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/pre_menu_card_tv_explanation_text_size"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/preMenuCardIv"
+        app:layout_constraintVertical_bias="0.501" />
+
+</android.support.constraint.ConstraintLayout>

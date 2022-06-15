@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/main_page_slider_background_width"
+    android:layout_height="@dimen/main_page_slider_background_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_page_slider_background_height"
+        android:layout_marginStart="@dimen/main_page_slider_background_margin_start"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/slider_background"
+        app:riv_corner_radius="@dimen/main_page_slider_background_corner_radius"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="@dimen/main_page_slider_title_width"
+        android:layout_height="@dimen/main_page_slider_title_height"
+        android:textColor="@color/colorWhite"
+        android:gravity="end"
+        android:fontFamily="@font/avenir_next_bold"
+        android:textSize="@dimen/main_page_slider_title_text_size"
+        android:layout_marginEnd="@dimen/main_page_slider_title_margin_end"
+        android:layout_marginTop="@dimen/main_page_slider_title_margin_top"
+        android:layout_alignParentEnd="true"
+        android:text="@string/main_page_slider_title"/>
+
+    <Button
+        android:id="@+id/getCodeBtn"
+        android:layout_width="@dimen/main_page_slider_button_width"
+        android:layout_height="@dimen/main_page_slider_button_height"
+        android:textAllCaps="false"
+        android:textSize="@dimen/main_page_slider_button_text_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/main_page_slider_button_margin"
+        android:textColor="@color/bottomMenuTextGreen"
+        android:fontFamily="@font/avenir_next_demi_bold"
+        android:text="@string/main_page_slider_get_promo_code"
+        android:background="@drawable/corner_btn_white"/>
+
+</RelativeLayout>

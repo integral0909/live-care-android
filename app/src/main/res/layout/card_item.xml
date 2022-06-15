@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/payment_card_card_height"
+    android:layout_marginBottom="@dimen/payment_card_card_margin_bottom"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/cardBrand"
+        android:layout_width="@dimen/payment_card_mastercard_width"
+        android:layout_height="@dimen/payment_card_mastercard_height"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/ic_master_card"
+        android:layout_marginStart="@dimen/payment_card_mastercard_margin_start"/>
+
+    <ImageView
+        android:id="@+id/hDots"
+        android:layout_width="@dimen/payment_card_mastercard_dots_width"
+        android:layout_height="@dimen/payment_card_mastercard_dots_height"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/payment_card_mastercard_dots_margin_start"
+        android:layout_toRightOf="@+id/cardBrand"
+        android:src="@drawable/horizontal_dots_black"/>
+
+    <TextView
+        android:id="@+id/lastCardNumbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/hDots"
+        android:fontFamily="@font/avenir_next_medium"
+        android:textColor="@color/darkGrey"
+        android:text="1234"
+        android:layout_marginStart="@dimen/payment_card_last_card_number_margin_start"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/dotsMore"
+        android:layout_width="@dimen/delivery_address_add_address_dots_width"
+        android:layout_height="@dimen/delivery_address_add_address_dots_height"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/delivery_address_add_address_dots_margin_end"
+        android:clickable="true"
+        android:src="@mipmap/more_vertical_dots" />
+
+</RelativeLayout>

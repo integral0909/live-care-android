@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootPaymentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/paymentMethodInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/your_orders_payment"/>
+
+    <RelativeLayout
+        android:id="@+id/paymentMethodLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_order_payment_height"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:background="@color/colorWhite">
+
+        <LinearLayout
+            android:id="@+id/paymentMethodIcLayout"
+            android:layout_width="@dimen/your_orders_pay_ic_layout_width"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/your_orders_pay_ic_layout_margin_start">
+
+            <ImageView
+                android:id="@+id/paymentMethodIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/your_orders_pay_ic_height"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_dollar"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/your_orders_pay_title_margin_start"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/hDots"
+                android:layout_width="@dimen/your_orders_pay_hdots_width"
+                android:layout_height="@dimen/payment_card_mastercard_dots_height"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:layout_marginEnd="@dimen/your_orders_pay_hdots_margin_end"
+                android:src="@mipmap/h_dots_three"/>
+
+            <TextView
+                android:id="@+id/paymentType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/your_orders_customer_text"
+                android:textColor="@color/darkGrey"
+                android:fontFamily="@font/avenir_next_regular"
+                android:text="@string/your_orders_cash"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/changePaymentMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/your_orders_pay_change_text_size"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/your_orders_pay_change_margin_end"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/your_res_contact_change"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emptyPaymentMethod"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_order_payment_height"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:visibility="gone"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/your_orders_pay_change_margin_start"
+            android:textSize="@dimen/your_orders_pay_change_text_size"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/your_orders_payment_empty"/>
+
+        <ImageView
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_arrow_margin_end"
+            android:src="@mipmap/arrow_open_green"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

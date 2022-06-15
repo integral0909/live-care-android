@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dish_item_height"
+    android:layout_marginBottom="@dimen/dish_item_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/dishImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/dish_item_margin"
+        android:layout_marginEnd="@dimen/dish_item_margin"
+        app:riv_corner_radius="@dimen/dish_item_img_radius"
+        android:src="@mipmap/dish_background1"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/dish_item_margin"
+        android:layout_marginEnd="@dimen/dish_item_margin"
+        app:riv_corner_radius="@dimen/dish_item_img_radius"
+        android:src="@color/colorBlackOpacity23"/>
+
+    <TextView
+        android:id="@+id/dishTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textSize="@dimen/dish_item_title_text_size"
+        android:gravity="center"
+        android:textColor="@color/colorWhite"
+        android:fontFamily="@font/avenir_next_bold"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:shadowColor="@color/darkGrey"
+        android:text="Taco"/>
+
+</RelativeLayout>

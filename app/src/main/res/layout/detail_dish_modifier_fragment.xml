@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/modifierLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divideGrey"
+    android:paddingTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/modifierTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/detail_dish_modifier"/>
+
+    <com.ogaclejapan.smarttablayout.SmartTabLayout
+        android:id="@+id/modifierSmartTab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:paddingBottom="@dimen/detail_dish_modifier_padding_bottom"
+        android:background="@color/colorWhite"
+        app:stl_indicatorColor="@color/colorPrimary"
+        app:stl_indicatorInterpolation="linear"
+        app:stl_dividerThickness="0dp"
+        app:stl_distributeEvenly="false"
+        app:stl_underlineThickness="0dp"
+        app:stl_indicatorWidth="@dimen/detail_dish_modifier_tab_width"
+        app:stl_indicatorThickness="@dimen/my_orders_tab_indicator_height"
+        app:stl_customTabTextLayoutId="@layout/custom_modifier_tab"
+        app:stl_customTabTextViewId="@id/custom_text"
+        />
+
+    <xyz.santeri.wvp.WrappingViewPager
+        android:id="@+id/modifierViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:layout_marginBottom="@dimen/detail_dish_modifier_view_pager_margin_bottom"/>
+
+</LinearLayout>

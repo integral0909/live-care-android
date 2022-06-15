@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/divideGrey"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_bar_height"
+        android:paddingTop="@dimen/profile_bar_padding_top"
+        android:paddingBottom="@dimen/profile_bar_padding_bottom"
+        android:background="@color/colorWhite"
+        android:gravity="center_horizontal"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/profile_bar_title_text"
+        android:fontFamily="@font/avenir_next_demi_bold"
+        android:text="@string/profile_bar_title"/>
+
+    <RelativeLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/profile_info_margin_top"
+        android:layout_height="@dimen/profile_info_height">
+        
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profileAvatar"
+            android:layout_width="@dimen/profile_avatar_size"
+            android:layout_height="@dimen/profile_avatar_size"
+            android:layout_marginTop="@dimen/profile_avatar_margin_top"
+            android:layout_marginBottom="@dimen/profile_avatar_margin_bottom"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start"
+            android:layout_marginEnd="@dimen/profile_avatar_margin_end"
+            app:riv_oval="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/profile_avatar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/profile_avatar_margin_top"
+            android:layout_marginBottom="@dimen/profile_avatar_margin_bottom"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/profileAvatar">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:textSize="@dimen/profile_name_text"
+                android:text="Aldo Jaramillo"/>
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:layout_marginTop="@dimen/profile_name_margin_top"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textSize="@dimen/profile_name_text"
+                android:text="+1 226 606 9454"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:layout_marginTop="@dimen/profile_name_margin_top"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textSize="@dimen/profile_name_text"
+                android:text="aldo.jaramillo@gmail.com"/>
+
+        </LinearLayout>
+        
+        <ImageView
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_arrow_margin_end"
+            android:src="@mipmap/arrow_open_green"/>
+        
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/profileGuestLayout"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/profile_info_margin_top"
+        android:layout_height="@dimen/profile_info_height"
+        android:visibility="gone"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/profile_guest_header_width"
+            android:layout_height="@dimen/profile_guest_header_height"
+            android:layout_marginStart="@dimen/profile_guest_header_margin_start"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/star_green"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/profile_guest_header_text_margin_start"
+            android:layout_marginEnd="@dimen/profile_guest_header_text_margin_end"
+            android:textSize="@dimen/profile_guest_header_text_size"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/avenir_next"
+            android:layout_gravity="center_vertical"
+            android:text="@string/main_page_sign_up_to_collect"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_logout_height"
+        android:layout_marginTop="@dimen/profile_info_margin_top"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/profile_logout_text"
+        android:fontFamily="@font/avenir_next_medium"
+        android:text="@string/profile_logout"/>
+
+    <TextView
+        android:id="@+id/loginSignUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_logout_height"
+        android:layout_marginTop="@dimen/profile_info_margin_top"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:visibility="gone"
+        android:textSize="@dimen/profile_logout_text"
+        android:fontFamily="@font/avenir_next_medium"
+        android:text="@string/profile_login_signup"/>
+
+    <RelativeLayout
+        android:id="@+id/paymentMethodBtn"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:visibility="gone"
+        android:layout_height="@dimen/profile_payment_height"
+        android:layout_marginTop="@dimen/profile_payment_margin_top">
+
+        <ImageView
+            android:id="@+id/payMetIc"
+            android:layout_width="@dimen/profile_payment_icon_width"
+            android:layout_height="@dimen/profile_payment_icon_height"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start"
+            android:src="@mipmap/payment_method"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/profile_logout_text"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/darkGrey"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start"
+            android:text="@string/profile_save_payment"
+            android:layout_toRightOf="@+id/payMetIc"/>
+
+        <ImageView
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_arrow_margin_end"
+            android:src="@mipmap/arrow_open_green"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/guestInfoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/profile_guest_info_text"
+        android:layout_marginTop="@dimen/profile_guest_info_margin_top"
+        android:layout_marginStart="@dimen/profile_guest_info_margin_start"
+        android:textColor="@color/darkGreyProfile65"
+        android:fontFamily="@font/avenir_next_regular"
+        android:text="@string/profile_guest_contact"/>
+
+    <RelativeLayout
+        android:id="@+id/guestInfo"
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:background="@color/colorWhite"
+        android:layout_height="@dimen/profile_guest_info_height"
+        android:layout_marginTop="@dimen/profile_guest_info_margin_top2">
+
+        <TextView
+            android:id="@+id/emptyContact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textSize="@dimen/profile_name_text"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:layout_toLeftOf="@+id/contactArrow"
+            android:text="@string/profile_empty_contact" />
+
+        <LinearLayout
+            android:id="@+id/contactFields"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_guest_info_height"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:paddingStart="@dimen/profile_guest_info_margin_start"
+            android:paddingEnd="@dimen/profile_guest_info_margin_start"
+            android:layout_toLeftOf="@+id/contactArrow"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameGuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:textSize="@dimen/profile_name_text"
+                android:text="Aldo Jaramillo"/>
+
+            <TextView
+                android:id="@+id/phoneGuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:layout_marginTop="@dimen/profile_name_margin_top"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textSize="@dimen/profile_name_text"
+                android:text="+1 226 606 9454"/>
+
+            <TextView
+                android:id="@+id/emailGuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:layout_marginTop="@dimen/profile_name_margin_top"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textSize="@dimen/profile_name_text"
+                android:text="aldo.jaramillo@gmail.com"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/contactArrow"
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_arrow_margin_end"
+            android:src="@mipmap/arrow_open_green"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/darkGreyProfile65"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textSize="@dimen/profile_default_text"
+        android:layout_marginTop="@dimen/profile_payment_margin_top"
+        android:layout_marginStart="@dimen/profile_avatar_margin_start"
+        android:text="@string/profile_default"/>
+
+    <RelativeLayout
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_delivery_height"
+        android:layout_marginTop="@dimen/profile_delivery_margin_top"
+        android:clickable="true"
+        android:background="@color/colorWhite">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/mapLayer"
+            android:layout_width="@dimen/profile_delivery_google_width"
+            android:layout_height="@dimen/profile_delivery_google_height"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start">
+
+            <ImageView
+                android:id="@+id/map"
+                android:layout_width="@dimen/profile_delivery_google_width"
+                android:layout_height="@dimen/profile_delivery_google_height"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/mapMarker"
+                android:layout_width="21dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/map" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/emptyAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/mapLayer"
+            android:gravity="center"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textSize="@dimen/profile_name_text"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/profile_empty_address"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start"
+            android:layout_marginEnd="@dimen/profile_delivery_margin_end"/>
+
+        <LinearLayout
+            android:id="@+id/addressFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mapLayer"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start"
+            android:layout_marginEnd="@dimen/profile_delivery_margin_end"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/postIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/profile_delivery_text"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/darkGrey"
+                android:text="54 555 "/>
+
+            <TextView
+                android:id="@+id/street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/profile_delivery_text"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/darkGrey"
+                android:text="49 Featherstone Str  "/>
+
+            <TextView
+                android:id="@+id/cityAndCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/profile_delivery_text"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/darkGrey"
+                android:text="New York USA"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/changeAddressArrow"
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_arrow_margin_end"
+            android:src="@mipmap/arrow_open_green"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

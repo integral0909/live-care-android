@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divideGrey">
+
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/profile_bar_padding_top"
+            android:paddingBottom="@dimen/profile_bar_padding_bottom"
+            android:gravity="center_horizontal"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/profile_bar_title_text"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:text="@string/delivery_time_toolbar_title"/>
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/delivery_address_back_ic_width"
+            android:layout_height="@dimen/delivery_address_back_ic_height"
+            android:padding="@dimen/delivery_address_back_ic_padding"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/arrow_back_grey" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customToolbar"
+        android:layout_above="@+id/saveBtn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/asSoonBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/del_time_card_height"
+                android:clickable="true"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/del_time_as_soon_margin_top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/asSoonBtnIcon"
+                    android:layout_width="@dimen/del_time_btn_size"
+                    android:layout_height="@dimen/del_time_btn_size"
+                    android:layout_marginStart="@dimen/del_time_btn_margin_start"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/assoon_check"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:layout_marginStart="@dimen/del_time_btn_text_margin_start"
+                    android:textSize="@dimen/del_time_btn_text_size"
+                    android:textColor="@color/darkGrey"
+                    android:text="@string/delivery_time_as_soon"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/specifTimeBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/del_time_card_height"
+                android:clickable="true"
+                android:layout_below="@+id/asSoonBtn"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/del_time_btn_specif_time_margin_top"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/specifTimeBtnIcon"
+                    android:layout_width="@dimen/del_time_btn_size"
+                    android:layout_height="@dimen/del_time_btn_size"
+                    android:layout_marginStart="@dimen/del_time_btn_margin_start"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/assoon_un_check"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:layout_marginStart="@dimen/del_time_btn_text_margin_start"
+                    android:textSize="@dimen/del_time_btn_text_size"
+                    android:textColor="@color/darkGrey"
+                    android:text="@string/delivery_time_specific_time"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/dateTimeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/del_time_card_height"
+                android:clickable="true"
+                android:layout_below="@+id/specifTimeBtn"
+                android:background="@color/colorWhite"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/divide"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_page_sel_res_divide_height2"
+                    android:layout_marginStart="@dimen/del_time_divide_margin"
+                    android:layout_marginEnd="@dimen/del_time_divide_margin"
+                    android:background="@color/divideGrey"/>
+
+                <TextView
+                    android:id="@+id/dateTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:clickable="true"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:layout_marginStart="@dimen/del_time_btn_margin_start"
+                    android:textSize="@dimen/del_time_btn_text_size"
+                    android:textColor="@color/darkGrey"
+                    android:text="25 June 2018"/>
+
+                <TextView
+                    android:id="@+id/timeTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:layout_marginEnd="@dimen/del_time_btn_margin_start"
+                    android:textSize="@dimen/del_time_btn_text_size"
+                    android:textColor="@color/darkGrey"
+                    android:text="12:00 pm"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/calendarLayour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_below="@+id/dateTimeLayout">
+
+                <CalendarView
+                    android:id="@+id/calendar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"/>
+
+            </LinearLayout>
+
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/colorWhite"
+                android:timePickerMode="spinner"
+                android:layout_below="@+id/dateTimeLayout"/>
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/new_address_save_btn_height"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/corner_btn_green"
+        android:textSize="@dimen/new_address_save_btn_text"
+        android:fontFamily="@font/avenir_next_demi_bold"
+        android:text="@string/new_address_save"/>
+
+</RelativeLayout>

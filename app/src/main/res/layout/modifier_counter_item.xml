@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/modif_counter_height"
+    android:background="@color/colorWhite"
+    android:paddingEnd="@dimen/modif_counter_padding"
+    android:paddingStart="@dimen/modif_counter_padding">
+
+    <TextView
+        android:id="@+id/modifierName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/avenir_next_medium"
+        android:text="Ham"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/modif_counter_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/modif_counter_price_margin_start"
+        android:fontFamily="@font/avenir_next_bold"
+        android:text="+$1.00"
+        android:textColor="@color/darkGrey"
+        android:textSize="@dimen/modif_counter_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_minus"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_plus"
+        android:layout_width="@dimen/modif_counter_btn_size"
+        android:layout_height="@dimen/modif_counter_btn_size"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/button_plus_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/modifierCount"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/modif_counter_btn_size"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/modif_counter_txt_margin_bottom"
+        android:layout_marginEnd="@dimen/modif_counter_txt_margin_end"
+        android:layout_marginTop="@dimen/modif_counter_txt_margin_top"
+        android:layout_toLeftOf="@+id/btn_plus"
+        android:fontFamily="@font/avenir_next_demi_bold"
+        android:gravity="center_vertical"
+        android:text="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/modif_counter_text_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_plus"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btn_minus"
+        android:layout_width="@dimen/modif_counter_btn_size"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/modif_counter_txt_margin_end"
+        android:layout_toLeftOf="@+id/modifierCount"
+        android:src="@mipmap/button_minus_green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/modifierCount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

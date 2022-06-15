@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_text"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:textSize="@dimen/custom_modif_tab_text"
+    android:textColor="@drawable/modifier_tab_title_color"
+    android:gravity="center"
+    android:paddingTop="@dimen/custom_modif_tab_padding_top"
+    android:paddingBottom="@dimen/custom_modif_tab_padding_bottom"
+    android:paddingLeft="@dimen/custom_modif_tab_padding_left"
+    android:paddingRight="@dimen/custom_modif_tab_padding_right"
+    android:fontFamily="@font/avenir_next_demi_bold">
+
+</TextView>

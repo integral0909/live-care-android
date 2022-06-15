@@ -1,0 +1,129 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+        <item name="android:fontFamily">@font/avenir_next_regular</item>
+    </style>
+
+    <style name="AppTheme.TransparentTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+    <style name="AppTheme.WhiteTheme">
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="editTextHindStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="editTextHindAddressStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/darkGreyProfile65</item>
+    </style>
+
+    <style name="editTextHintChangeProfileStyle" parent="@android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/avenir_next_demi_bold</item>
+        <item name="android:textColor">@color/bottomMenuDarkGrey</item>
+    </style>
+
+    <style name="editTextEditAddressStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/darkGreyProfile65</item>
+        <item name="android:fontFamily">@font/avenir_next_regular</item>
+        <item name="android:backgroundTint">@color/divideGrey</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/darkGreyProfile65</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+    <style name="tabTextStyle" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">@font/avenir_next_demi_bold</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="editTextChangeProfileStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/darkGreyProfile65</item>
+        <item name="android:backgroundTint">@color/divideGrey</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:textColorHint">@color/darkGreyProfile65</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:cursorVisible">true</item>
+    </style>
+
+    <style name="textInputAddressStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColorHint">@color/bottomMenuDarkGrey</item>
+        <item name="android:backgroundTint">@color/divideGrey</item>
+    </style>
+
+    <style name="textInputChangeProfileStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColorHint">@color/bottomMenuDarkGrey</item>
+        <item name="android:backgroundTint">@color/divideGrey</item>
+    </style>
+
+    <style name="AppTheme.WhiteActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorWhite</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+    </style>
+
+    <style name="editTextErrorStyle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">@font/avenir_next_medium</item>
+        <item name="android:textSize">8sp</item>
+    </style>
+
+    <style name="loginEditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:backgroundTint">@color/colorWhite</item>
+    </style>
+
+    <style name="preMenuCardViewStyle">
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginStart">24dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+    </style>
+
+    <style name="menuTextViewStyle">
+        <item name="android:singleLine">true</item>
+        <item name="android:gravity">center|right</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="menuBtnFiltersStyle">
+        <item name="android:background">@drawable/menu_btn_filter_background</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/darkGrey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="CustomPicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/bottomMenuTextGreen</item>
+        <item name="colorControlActivated">@color/bottomMenuTextGreen</item>"
+        <item name="colorAccent">@color/bottomMenuTextGreen</item>
+    </style>
+
+</resources>

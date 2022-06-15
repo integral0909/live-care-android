@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/fieldsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/sel_rest_item_field_margin_top"
+        android:layout_marginBottom="@dimen/sel_rest_item_field_margin_bottom"
+        android:layout_marginStart="@dimen/sel_rest_item_field_margin_start"
+        android:layout_marginEnd="@dimen/sel_rest_item_field_margin_end"
+        android:layout_toLeftOf="@+id/arrowChange"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/restaurantTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:textSize="@dimen/sel_rest_item_title_text_size"
+            android:text="Restaurant 1"/>
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textSize="@dimen/sel_rest_item_title_text_size"
+            android:text="49 Featherstone Str. New York. USA "/>
+
+        <LinearLayout
+            android:id="@+id/workTimeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/workingStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/bottomMenuTextGreen"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textSize="@dimen/sel_rest_item_title_text_size"
+                android:text="Open"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGrey"
+                android:fontFamily="@font/avenir_next_medium"
+                android:textSize="@dimen/sel_rest_item_dot_size"
+                android:text=" • "/>
+
+            <TextView
+                android:id="@+id/workTimeCloseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/darkGreyB6"
+                android:fontFamily="@font/avenir_next_medium"
+                android:textSize="@dimen/sel_rest_item_title_text_size"
+                android:text="Closes in 23:00"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/arrowChange"
+        android:layout_width="@dimen/profile_arrow_width"
+        android:layout_height="@dimen/profile_arrow_height"
+        android:layout_marginEnd="@dimen/sel_rest_item_arrow_margin_end"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:src="@mipmap/arrow_open_green" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_page_sel_res_divide_height2"
+        android:layout_below="@+id/fieldsLayout"
+        android:background="@color/divideGrey"/>
+
+</RelativeLayout>

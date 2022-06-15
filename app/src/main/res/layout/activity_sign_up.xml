@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@mipmap/main_background"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/closeBtn"
+        android:layout_width="@dimen/log_main_close_btn_size"
+        android:layout_height="@dimen/log_main_close_btn_size"
+        android:padding="@dimen/log_main_close_btn_padding"
+        android:src="@mipmap/close" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/log_main_logo_margin_top"
+        android:layout_marginBottom="@dimen/log_main_logo_margin_bottom"
+        android:gravity="center"
+        android:layout_above="@+id/editName">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/logo" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editName"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/log_main_ed_email_height"
+        android:layout_above="@+id/editEmail"
+        android:layout_marginEnd="@dimen/log_main_ed_txt_margin_end"
+        android:layout_marginStart="@dimen/log_main_ed_txt_margin_start"
+        android:textColorHint="@color/colorWhite"
+        app:errorTextAppearance="@style/editTextErrorStyle"
+        app:hintTextAppearance="@style/editTextHindStyle">
+
+        <android.support.v7.widget.AppCompatEditText
+            style="@style/loginEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:drawablePadding="@dimen/log_main_ed_email_drawable_padding3"
+            android:drawableStart="@mipmap/people"
+            android:fontFamily="@font/avenir_next_medium"
+            android:hint="@string/sign_up_hint_your_name"
+            android:paddingStart="@dimen/log_main_ed_email_padding_start"
+            android:singleLine="true"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/log_main_ed_email_text_size" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editEmail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/log_main_ed_email_height"
+        android:layout_above="@+id/editPhone"
+        android:layout_marginEnd="@dimen/log_main_ed_txt_margin_end"
+        android:layout_marginStart="@dimen/log_main_ed_txt_margin_start"
+        android:textColorHint="@color/colorWhite"
+        app:errorTextAppearance="@style/editTextErrorStyle"
+        app:hintTextAppearance="@style/editTextHindStyle">
+
+        <android.support.v7.widget.AppCompatEditText
+            style="@style/loginEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:drawablePadding="@dimen/log_main_ed_email_drawable_padding"
+            android:drawableStart="@mipmap/ic_email"
+            android:fontFamily="@font/avenir_next_medium"
+            android:hint="@string/sign_up_hint_email"
+            android:inputType="textEmailAddress"
+            android:paddingStart="@dimen/log_main_ed_email_padding_start"
+            android:singleLine="true"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/log_main_ed_email_text_size" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editPhone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/log_main_ed_email_height"
+        android:layout_above="@+id/editPassword"
+        android:layout_marginEnd="@dimen/log_main_ed_txt_margin_end"
+        android:layout_marginStart="@dimen/log_main_ed_txt_margin_start"
+        android:textColorHint="@color/colorWhite"
+        app:errorTextAppearance="@style/editTextErrorStyle"
+        app:hintTextAppearance="@style/editTextHindStyle">
+
+        <android.support.v7.widget.AppCompatEditText
+            style="@style/loginEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:drawablePadding="@dimen/log_main_ed_email_drawable_padding"
+            android:drawableStart="@mipmap/phone"
+            android:fontFamily="@font/avenir_next_medium"
+            android:hint="@string/sign_up_hint_phone"
+            android:inputType="phone"
+            android:paddingStart="@dimen/log_main_ed_email_padding_start"
+            android:singleLine="true"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/log_main_ed_email_text_size" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/log_main_ed_email_height"
+        android:layout_above="@+id/editRepeatPassword"
+        android:layout_marginEnd="@dimen/log_main_ed_txt_margin_end"
+        android:layout_marginStart="@dimen/log_main_ed_txt_margin_start"
+        android:textColorHint="@color/colorWhite"
+        app:errorTextAppearance="@style/editTextErrorStyle"
+        app:hintTextAppearance="@style/editTextHindStyle">
+
+        <android.support.v7.widget.AppCompatEditText
+            style="@style/loginEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:drawablePadding="@dimen/log_main_ed_email_drawable_padding2"
+            android:drawableStart="@mipmap/ic_password"
+            android:fontFamily="@font/avenir_next_medium"
+            android:hint="@string/log_main_ed_txt_password"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/log_main_ed_email_padding_start2"
+            android:singleLine="true"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/log_main_ed_email_text_size" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/editRepeatPassword"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/log_main_ed_email_height"
+        android:layout_above="@+id/signUpBtn"
+        android:layout_marginEnd="@dimen/log_main_ed_txt_margin_end"
+        android:layout_marginBottom="@dimen/log_main_ed_password_margin_bottom"
+        android:layout_marginStart="@dimen/log_main_ed_txt_margin_start"
+        android:textColorHint="@color/colorWhite"
+        app:errorTextAppearance="@style/editTextErrorStyle"
+        app:hintTextAppearance="@style/editTextHindStyle">
+
+        <android.support.v7.widget.AppCompatEditText
+            style="@style/loginEditTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:drawablePadding="@dimen/log_main_ed_email_drawable_padding2"
+            android:drawableStart="@mipmap/ic_password"
+            android:fontFamily="@font/avenir_next_medium"
+            android:hint="@string/sign_up_hint_repeat_password"
+            android:inputType="textPassword"
+            android:paddingStart="@dimen/log_main_ed_email_padding_start2"
+            android:singleLine="true"
+            android:textColorHint="@color/colorWhite"
+            android:textSize="@dimen/log_main_ed_email_text_size" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="@dimen/log_main_login_btn_width"
+        android:layout_height="@dimen/log_main_login_btn_height"
+        android:layout_above="@+id/haveAccountLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/log_main_login_btn_margin_bottom"
+        android:background="@drawable/corner_btn_green"
+        android:fontFamily="@font/avenir_next_demi_bold"
+        android:text="@string/sign_up_sign_up"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/log_main_login_btn_title_size" />
+
+    <LinearLayout
+        android:id="@+id/haveAccountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/log_main_sign_up_margin_bottom"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_medium"
+            android:text="@string/sign_up_have_account"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/log_starter_allready_have_acc_text_size" />
+
+        <TextView
+            android:id="@+id/btnLoginIn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/log_starter_allready_have_acc_margin_start"
+            android:clickable="true"
+            android:fontFamily="@font/avenir_next_medium"
+            android:text="@string/sign_up_have_account_sign_up"
+            android:textColor="@color/colorWhite" />
+
+    </LinearLayout>
+
+</RelativeLayout>

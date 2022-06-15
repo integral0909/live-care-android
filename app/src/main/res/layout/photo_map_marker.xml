@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/cust_marker_width"
+    android:layout_height="@dimen/cust_marker_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/map_marker_border"/>
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/mapAvatar"
+        android:layout_width="@dimen/cust_marker_avatar_height"
+        android:layout_height="@dimen/cust_marker_avatar_height"
+        android:src="@mipmap/map_avatar_guest"
+        app:riv_oval="true"
+        android:scaleType="centerCrop"
+        android:foregroundGravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/cust_marker_avatar_margin_top"/>
+
+</RelativeLayout>

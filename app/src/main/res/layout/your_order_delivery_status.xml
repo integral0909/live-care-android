@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/headerStatus"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/your_orders_delivery_status_padding_top"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/yourOrderNumberTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/your_orders_delivery_status_title_text"
+            android:fontFamily="@font/avenir_next_medium"
+            android:textColor="@color/darkGrey"
+            android:text="@string/your_orders_delivery_status_your_order"/>
+
+        <TextView
+            android:id="@+id/orderNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/your_orders_delivery_status_title_text"
+            android:layout_marginStart="@dimen/your_orders_delivery_status_order_number_margin_start"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:textColor="@color/darkGreyProfile"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/your_orders_delivery_status_title_text"
+            android:layout_marginStart="@dimen/your_orders_delivery_status_order_number_margin_start"
+            android:fontFamily="@font/avenir_next_medium"
+            android:textColor="@color/darkGrey"
+            android:text="@string/your_orders_delivery_status_is"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/deliveryStatusTxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/your_orders_delivery_status_padding_top2"
+        android:textAllCaps="true"
+        android:gravity="center_horizontal"
+        android:background="@color/colorWhite"
+        android:fontFamily="@font/avenir_next_bold"
+        android:textColor="@color/bottomMenuTextGreen"
+        android:textSize="@dimen/your_orders_delivery_status_main_title"/>
+
+    <TextView
+        android:id="@+id/noRefundTxt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/your_orders_no_refund_margin_top"
+        android:textSize="@dimen/your_orders_delivery_status_title_text"
+        android:visibility="gone"
+        android:fontFamily="@font/avenir_next_medium"
+        android:textColor="@color/darkGrey"
+        android:gravity="center_horizontal"
+        android:background="@color/colorWhite"
+        android:text="@string/your_orders_delivery_status_not_refund"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/your_orders_delivery_status_padding_bottom2"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:layout_marginEnd="@dimen/your_orders_delivery_padding_start_end"
+        android:layout_height="@dimen/main_page_sel_res_divide_height2"
+        android:background="@color/divideGrey"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/orderWillDeliveredLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_be_delivery_height"
+        android:layout_marginTop="@dimen/profile_info_margin_top"
+        android:paddingStart="@dimen/your_orders_delivery_padding_start_end"
+        android:paddingEnd="@dimen/your_orders_delivery_padding_start_end"
+        android:visibility="gone"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/orderWillDeliveredTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/your_orders_be_delivery_margin"
+            android:layout_marginTop="@dimen/your_orders_be_delivery_margin"
+            android:fontFamily="@font/avenir_next_regular"
+            android:text="@string/my_orders_order_wiil_be_ready"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/your_orders_be_delivery_mins_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/minsTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/your_orders_be_delivery_margin"
+            android:layout_marginEnd="@dimen/your_orders_be_delivery_marginEnd"
+            android:layout_marginTop="@dimen/your_orders_be_delivery_margin"
+            android:layout_toLeftOf="@+id/minsPostFix"
+            android:fontFamily="@font/avenir_next_bold"
+            android:textColor="@color/darkGreyProfile"
+            android:textSize="@dimen/your_orders_be_delivery_mins_text_huge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/minsPostFix"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/minsPostFix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="@string/mins"
+            android:visibility="gone"
+            android:textColor="@color/darkGreyProfile"
+            android:textSize="@dimen/your_orders_be_delivery_mins_text"
+            app:layout_constraintBaseline_toBaselineOf="@+id/minsTxt"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/divide1"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:layout_marginEnd="@dimen/your_orders_delivery_padding_start_end"
+        android:layout_height="@dimen/main_page_sel_res_divide_height2"
+        android:background="@color/divideGrey"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/profile_info_margin_top"
+        android:paddingTop="@dimen/your_orders_delivery_padding_start_vertical"
+        android:paddingBottom="@dimen/your_orders_delivery_padding_start_vertical"
+        android:paddingStart="@dimen/your_orders_delivery_padding_start_end"
+        android:paddingEnd="@dimen/your_orders_delivery_padding_start_end"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:id="@+id/orderPlacedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/your_orders_be_delivery_mins_text"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/darkGrey"
+            android:text="@string/my_orders_order_placed"/>
+
+        <TextView
+            android:id="@+id/placedTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:layout_toRightOf="@+id/orderPlacedTitle"
+            android:textSize="@dimen/your_orders_be_delivery_mins_text"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/darkGrey"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

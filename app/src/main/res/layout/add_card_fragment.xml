@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:background="@color/colorWhite">
+
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_bar_height"
+        android:background="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/toolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/profile_bar_padding_top"
+            android:paddingBottom="@dimen/profile_bar_padding_bottom"
+            android:gravity="center_horizontal"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/profile_bar_title_text"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:text="@string/add_card_toolbar_title"/>
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/delivery_address_back_ic_width"
+            android:layout_height="@dimen/delivery_address_back_ic_height"
+            android:padding="@dimen/delivery_address_back_ic_padding"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/arrow_back_grey" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divide"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_page_sel_res_divide_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customToolbar"
+        android:layout_below="@+id/customToolbar"
+        android:background="@color/divideGrey"/>
+
+    <com.braintreepayments.cardform.view.CardForm
+        android:id="@+id/cardForm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divide" />
+
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/add_card_btn_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/avenir_next_demi_bold"
+        android:text="@string/add_card_btn_txt"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/new_address_save_btn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/colorDarkTransparent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.WhiteActionBar"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:gravity="center_horizontal"
+            android:paddingBottom="@dimen/profile_bar_padding_bottom"
+            android:paddingTop="@dimen/profile_bar_padding_top"
+            android:text="@string/your_orders_toolbar_title"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/profile_bar_title_text" />
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/delivery_address_back_ic_width"
+            android:layout_height="@dimen/delivery_address_back_ic_height"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/delivery_address_back_ic_padding"
+            android:src="@mipmap/close_dark_grey" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/checkoutBtn"
+        android:layout_below="@+id/customToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/divideGrey"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/your_orders_logo_height">
+
+                <ImageView
+                    android:id="@+id/mainBackGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/your_order_background" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorDarkTransparent2" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/your_orders_logo_padding"
+                    android:paddingTop="@dimen/your_orders_logo_padding"
+                    android:src="@mipmap/logo" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/your_order_contact_info" />
+
+            <include layout="@layout/your_order_delivery_to" />
+
+            <include layout="@layout/your_order_order_total" />
+
+            <include layout="@layout/your_order_number_of_table" />
+
+            <include layout="@layout/your_order_payment" />
+
+            <include layout="@layout/your_order_promo_code" />
+
+            <include layout="@layout/your_order_comment" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/checkoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/your_orders_cancel_order_btn_height"
+            android:clickable="false"
+            android:background="@color/colorPrimary"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:textColor="@color/colorWhite"
+            android:text="@string/checkout_btn_title"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</RelativeLayout>

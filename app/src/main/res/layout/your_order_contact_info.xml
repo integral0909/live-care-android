@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/orderContactInfoLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/contactInfoTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/your_orders_contact_info"/>
+
+    <RelativeLayout
+        android:id="@+id/contactInfoCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_customer_height"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/customerAvatar"
+            android:layout_width="@dimen/your_orders_customer_avatar_size"
+            android:layout_height="@dimen/your_orders_customer_avatar_size"
+            android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+            app:riv_oval="true"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/map_avatart"/>
+
+        <LinearLayout
+            android:id="@+id/contactFields"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/customerAvatar"
+            android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+            android:layout_marginEnd="@dimen/your_orders_delivery_padding_start_end"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/customerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/your_orders_customer_text"
+                android:textColor="@color/darkGrey"
+                android:fontFamily="@font/avenir_next_regular" />
+
+            <TextView
+                android:id="@+id/customerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/your_orders_customer_text"
+                android:layout_marginTop="@dimen/your_orders_customer_phone_margin_top"
+                android:textColor="@color/darkGrey"
+                android:fontFamily="@font/avenir_next_regular" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/changeContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/your_orders_change_contact_text_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/your_orders_change_contact_margin_end"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/your_res_contact_change"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/emptyContact"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_customer_height"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textSize="@dimen/profile_name_text"
+        android:textColor="@color/bottomMenuTextGreen"
+        android:gravity="center"
+        android:background="@color/colorWhite"
+        android:text="@string/profile_empty_contact" />
+
+</LinearLayout>

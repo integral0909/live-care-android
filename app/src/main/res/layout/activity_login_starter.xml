@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_background"
+    android:fitsSystemWindows="true">
+    
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="@dimen/log_starter_logo_width"
+        android:layout_height="@dimen/log_starter_logo_height"
+        android:src="@mipmap/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/log_starter_logo_margin_top"/>
+
+    <LinearLayout
+        android:id="@+id/buttonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="bottom"
+        android:layout_above="@+id/haveAccountLayout"
+        android:layout_below="@+id/logo"
+        android:layout_marginStart="@dimen/log_starter_buttons_margin_start"
+        android:layout_marginEnd="@dimen/log_starter_buttons_margin_end"
+        android:layout_marginBottom="@dimen/log_starter_buttons_margin_bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/btnFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/log_starter_buttons_height"
+            android:layout_marginBottom="@dimen/log_starter_buttons_margin_bottom_divide"
+            android:background="@drawable/corner_btn_blue_facebook"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/log_starter_soc_logo_size"
+                android:layout_height="@dimen/log_starter_soc_logo_size"
+                android:layout_marginEnd="@dimen/log_starter_soc_logo_margin_end"
+                android:src="@mipmap/facebook_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:text="@string/log_starter_login_via_facebook"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/log_starter_buttons_text_size" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/log_starter_buttons_height"
+            android:layout_marginBottom="@dimen/log_starter_buttons_margin_bottom_divide"
+            android:background="@drawable/corner_btn_white"
+            android:clickable="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/log_starter_soc_logo_size"
+                android:layout_height="@dimen/log_starter_soc_logo_size"
+                android:layout_marginEnd="@dimen/log_starter_soc_logo_margin_end"
+                android:src="@mipmap/google_logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:text="@string/log_starter_login_via_google"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/log_starter_buttons_text_size" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:gravity="center"
+            android:layout_marginBottom="46dp"
+            android:fontFamily="@font/avenir_next_medium"
+            android:textColor="@color/colorWhite"
+            android:text="Create an account to get Loyalty Points for every dollar spent"/>
+
+        <Button
+            android:id="@+id/btnCreateAccount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/log_starter_buttons_height"
+            android:layout_marginBottom="@dimen/log_starter_buttons_margin_bottom_divide"
+            android:background="@drawable/corner_btn_green"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:text="@string/log_starter_create_account"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/log_starter_buttons_text_size" />
+
+        <Button
+            android:id="@+id/btnGuest"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/log_starter_buttons_height"
+            android:background="@drawable/corner_btn_white_border"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:text="@string/log_starter_continue_as_guest"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/log_starter_buttons_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/haveAccountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/log_starter_allready_have_acc_height"
+        android:layout_marginBottom="@dimen/log_starter_allready_have_acc_margin_bottom"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/avenir_next_medium"
+            android:textSize="@dimen/log_starter_allready_have_acc_text_size"
+            android:text="@string/log_starter_allready_have_acc"/>
+
+        <TextView
+            android:id="@+id/btnLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/log_starter_allready_have_acc_margin_start"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/avenir_next_medium"
+            android:text="@string/log_starter_login"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:background="@color/colorDarkTransparent">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.WhiteActionBar"
+            android:layout_centerInParent="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

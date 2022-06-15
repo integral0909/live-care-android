@@ -1,0 +1,320 @@
+<resources>
+    <string name="app_name">MunchBearClient</string>
+
+    <!--Facebook meta-data-->
+    <string name="facebook_app_id">719565288394025</string>
+    <string name="fb_login_protocol_scheme">fb719565288394025</string>
+
+    <!--Utils and another-->
+    <string name="network_utils_check_internet">Please check your network connection</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_main">Main</string>
+    <string name="title_menu">Menu</string>
+    <string name="title_my_orders">My Orders</string>
+    <string name="title_profile">Profile</string>
+    <string name="mins">mins</string>
+    <string name="search">Search</string>
+    <string name="cancel">Cancel</string>
+    <string name="default_notification_channel_id">default</string>
+
+    <!--Toast message-->
+    <string name="somethings_went_wrong">Something went wrong</string>
+    <string name="channel_name">Munch Bear channel</string>
+    <string name="channel_description">Munch Bear channel description</string>
+    <string name="toast_somethings_went_wrong">Something went wrong</string>
+    <string name="toast_not_valid_data">You entered not valid data</string>
+    <string name="toast_email_has_already_taken">The email has already been taken</string>
+    <string name="toast_sign_up_error">Something went wrong during the registration</string>
+    <string name="toast_login_google_error">Something went wrong during the login with Google account</string>
+    <string name="toast_login_facebook_error">Something went wrong during the login with Facebook</string>
+    <string name="toast_restaurant_list_error">Something went wrong with get restaurant list. Please try again</string>
+    <string name="toast_restaurant_list_empty">Sorry. Restaurants with chosen type of delivery are not supported now. Please change type of delivery.</string>
+    <string name="toast_reservation_list_error">Something went wrong with get your reservation list. Please try again</string>
+    <string name="toast_order_list_error">Something went wrong with get your order list. Please try again</string>
+    <string name="toast_create_reservation_error">Something went wrong with creating reservation. Please try again</string>
+    <string name="toast_res_user_data_updated">Contacts of customer of table updated</string>
+    <string name="toast_res_user_data_updated_error">Something went wrong with updating reservation. Please try again</string>
+    <string name="toast_res_canceling_error">Something went wrong with canceling reservation. Please try again</string>
+    <string name="toast_count_of_people_error">Count of people can not be empty or 0</string>
+    <string name="toast_update_card_error">Something went wrong with updating your card. Please try again</string>
+    <string name="toast_not_valid_payment_type">Not valid payment method</string>
+    <string name="toast_not_valid_contact_information">Not valid contact information</string>
+    <string name="toast_not_valid_table_number">Not valid table number</string>
+    <string name="toast_get_loyalty_point_error">Something went wrong with getting your loyalty balance. Please try again</string>
+    <string name="toast_get_payment_method_error">Something went wrong with getting enabled payment methods. Please try again</string>
+    <string name="toast_add_card_error">Something went wrong with adding new credit card. Please try again</string>
+    <string name="toast_card_list_error">Something went wrong with getting your card list. Please try again</string>
+    <string name="toast_card_delete_error">Something went wrong with deleting your card. Please try again</string>
+    <string name="toast_add_card_duplicate">A duplicate customer card data already exists.</string>
+
+    <!--Login starter-->
+    <string name="log_starter_have_account">Already have an account?</string>
+    <string name="log_starter_login"><u>LOGIN</u></string>
+    <string name="log_starter_login_via_facebook">Login with facebook</string>
+    <string name="log_starter_login_via_google">Login with google</string>
+    <string name="log_starter_create_account">Create an account</string>
+    <string name="log_starter_continue_as_guest">Continue as a guest</string>
+    <string name="log_starter_allready_have_acc">Already have an account?</string>
+
+    <!--Login main-->
+    <string name="log_main_sign_up"><u>SIGN UP</u></string>
+    <string name="log_main_recover_here"><u>RECOVER HERE</u></string>
+    <string name="log_main_ed_txt_email">Email</string>
+    <string name="log_main_ed_txt_password">Password</string>
+    <string name="log_main_recover_pass_1">Forget password? It\’s ok.</string>
+    <string name="log_main_login_btn_title">LOGIN</string>
+    <string name="log_main_follow_as">Or you can Login with one of the following</string>
+    <string name="log_main_dent_have_account">Don\’t have an account?</string>
+
+    <!--Sign Up-->
+    <string name="sign_up_have_account">Already have an account?</string>
+    <string name="sign_up_have_account_sign_up"><u>LOG IN</u></string>
+    <string name="sign_up_sign_up">SIGN UP</string>
+    <string name="sign_up_hint_your_name">Your name</string>
+    <string name="sign_up_hint_email">Email</string>
+    <string name="sign_up_hint_phone">Phone</string>
+    <string name="sign_up_hint_repeat_password">Repeat password</string>
+
+    <!--Validation-->
+    <string name="email_empty">Email is required</string>
+    <string name="email_not_valid">Invalid email format</string>
+    <string name="password_empty">Password is required</string>
+    <string name="password_not_valid">Password must contain at least 8 characters</string>
+    <string name="name_empty">Name is required</string>
+    <string name="name_not_valid">Name must contain at least 3 characters</string>
+    <string name="phone_empty">Phone is required</string>
+    <string name="phone_not_valid">Invalid phone format</string>
+    <string name="repeat_password_empty">Repeat password is required</string>
+    <string name="repeat_password_not_equals">Repeat password must be equals password</string>
+    <string name="empty_fields">This field is required</string>
+
+    <!--Main page-->
+    <string name="main_page_slider_title">Buy 1 \n get 1 FREE</string>
+    <string name="main_page_slider_get_promo_code">Get promo code</string>
+    <string name="main_page_sign_up_to_collect"><b>Sign up</b> to collect <b>loyalty points</b> for every online purchase</string>
+    <string name="main_page_make_your_table_reservation">Make your \n<b>TABLE RESERVATION</b> now</string>
+    <string name="main_page_your_loyalty">Your \n<b>Loyalty balance</b></string>
+    <string name="main_page_select_restaurant">SELECT RESTAURANT</string>
+    <string name="main_page_points">points</string>
+    <string name="main_page_sign_up">Sign up</string>
+
+    <!--Promo code-->
+    <string name="promo_code_bat_title">Promo code</string>
+    <string name="promo_code_desc">Copy promocode and don’t forget to apply it at checkout</string>
+    <string name="promo_code_copy">Copy</string>
+    <string name="title_activity_maps22">Map</string>
+
+    <!--Profile-->
+    <string name="profile_bar_title">Profile</string>
+    <string name="profile_logout">LOGOUT</string>
+    <string name="profile_login_signup">SIGN UP / LOG IN</string>
+    <string name="profile_save_payment">Saved payment method</string>
+    <string name="profile_default">Default delivery address</string>
+    <string name="profile_guest_contact">Guest contacts</string>
+    <string name="profile_empty_address">Select delivery address</string>
+    <string name="profile_empty_contact">Add your contact</string>
+    <string name="profile_name_fullname">%1$s %2$s</string>
+
+    <!--Delivery address-->
+    <string name="delivery_address_toolbar_title">Delivery address</string>
+    <string name="delivery_address_add_address">Add address</string>
+    <string name="delivery_address_select_from_my">Select from my address</string>
+    <string name="delivery_address_previous_address">Previous delivery addresses</string>
+    <string name="new_address">New address</string>
+    <string name="delivery_address_street_and_house">%1$s %2$s</string>
+    <string name="delivery_address_city_and_country">%1$s %2$s</string>
+
+    <!--New delivery address-->
+    <string name="new_address_street">Street*</string>
+    <string name="new_address_house_number">House number*</string>
+    <string name="new_address_unit_number">Unit number</string>
+    <string name="new_address_zip_code">Zip code*</string>
+    <string name="new_address_save">SAVE</string>
+
+    <!--My orders-->
+    <string name="my_orders_toolbar_title">My orders</string>
+    <string name="my_orders_tab_current">Current orders</string>
+    <string name="my_orders_tab_reservation">Table reservation</string>
+
+    <!--Change profile-->
+    <string name="change_profile_name"><b>Name</b></string>
+    <string name="change_profile_phone"><b>Phone</b></string>
+    <string name="change_profile_email"><b>Email</b></string>
+    <string name="change_profile_toolbar_title">Change profile</string>
+    <string name="change_profile_toolbar_title_contact">Contact information</string>
+    <string name="change_profile_get_photo_from_camera">Take new photo</string>
+    <string name="change_profile_get_photo_from_library">Chose from library</string>
+    <string name="change_profile_get_photo_remove">Remove photo</string>
+    <string name="change_profile_get_photo_dialog_title">Change profile photo</string>
+
+    <!--Payment methods-->
+    <string name="payment_met_toolbar_title">Your card</string>
+    <string name="payment_met_add_card">Add card</string>
+
+    <!--Delivery status-->
+    <string name="del_status_created">Created</string>
+    <string name="del_status_accepted">Accepted</string>
+    <string name="del_status_pending">Pending</string>
+    <string name="del_status_success">Success</string>
+    <string name="del_status_decline">Decline</string>
+    <string name="del_status_in_delivery">In delivery</string>
+    <string name="del_status_in_failed">Failed</string>
+    <string name="del_status_on_the_way">On the way</string>
+    <string name="del_status_delivered">Delivered</string>
+    <string name="del_status_canceled">Canceled</string>
+    <string name="del_status_cooking">Cooking</string>
+
+    <!--Reservation status-->
+    <string name="res_status_pending">Pending</string>
+    <string name="res_status_accepted">Accepted</string>
+    <string name="res_status_canceled_admin">Canceled</string>
+    <string name="res_status_canceled_user">Canceled</string>
+
+    <!--Delivery type-->
+    <string name="del_type_delivery">Delivered</string>
+    <string name="del_type_delivery_from">Delivery from</string>
+    <string name="del_type_pick_up">Pick up</string>
+    <string name="del_type_pick_up_at">Pick up at</string>
+    <string name="del_type_eat_in">Eat-in</string>
+    <string name="del_type_table_reservation">Table reservation</string>
+
+    <!--Edit payment card-->
+    <string name="edit_payment_card_toolbar_title_add">Add card</string>
+    <string name="edit_payment_card_toolbar_title_edit">Edit card</string>
+
+    <!-- PreMenu-->
+    <string name="pre_menu_first_type_title">delivery</string>
+    <string name="pre_menu_first_type_explanation">Select restaurant that offers delivery to your location to see correct prices and item availability </string>
+    <string name="pre_menu_second_type_title">pick up</string>
+    <string name="pre_menu_second_type_explanation">Select restaurant where you will pick your item from</string>
+    <string name="pre_menu_third_type_title">eat-in</string>
+    <string name="pre_menu_third_type_explanation">Select restaurant where you will pick your item from</string>
+    <string name="pre_menu_tv_title_text">what do you want to do?</string>
+
+    <!--My orders-->
+    <string name="my_orders_order_placed">Order placed</string>
+    <string name="my_orders_table_placed_title">Reservation placed</string>
+    <string name="my_orders_order_wiil_be">Order will be delivered in</string>
+    <string name="my_orders_order_wiil_be_ready">Order will be ready in</string>
+    <string name="my_orders_order_total">Total:</string>
+    <string name="my_orders_order_price">$ %1$s</string>
+
+    <!--Your orders-->
+    <string name="your_orders_toolbar_title">Your order</string>
+    <string name="your_orders_delivery_status_your_order">Your order</string>
+    <string name="your_orders_delivery_status_is">is</string>
+    <string name="your_orders_delivery_to">Delivery to</string>
+    <string name="your_orders_pick_up_at">Pick up at</string>
+    <string name="your_orders_eat_in">Restaurant</string>
+    <string name="your_orders_as_soon">As soon as possible</string>
+    <string name="your_orders_contact_info">Contact information</string>
+    <string name="your_orders_order_total">Order total</string>
+    <string name="your_orders_payment">Payment</string>
+    <string name="your_orders_payment_empty">Select payment method</string>
+    <string name="your_orders_promo_code_empty">Enter promo code</string>
+    <string name="your_orders_promo_code">Promo code</string>
+    <string name="your_orders_number_of_table">Number of table</string>
+    <string name="your_orders_table_empty">Enter number of table</string>
+    <string name="your_orders_cash">Cash</string>
+    <string name="your_orders_item_ordered">Items ordered</string>
+    <string name="your_orders_comment">Comment</string>
+    <string name="your_orders_cancel_order">CANCEL ORDER</string>
+    <string name="your_orders_delivery_status_not_refund">No refund</string>
+    <string name="your_orders_order_number">#%1$s</string>
+    <string name="your_orders_order_number2">Order №%1$s</string>
+    <string name="your_orders_reservation_number">Reservation №%1$s</string>
+
+    <!--Your table reservation-->
+    <string name="your_reservation_toolbar_title">Table Reservation</string>
+    <string name="your_reservation_cancel_reservation">CANCEL RESERVATION</string>
+    <string name="your_res_res_title">Your reservation</string>
+    <string name="your_res_res_placed_title">Reservation placed</string>
+    <string name="your_res_contact_title">Contact</string>
+    <string name="your_res_contact_change">Change</string>
+    <string name="your_res_when">When</string>
+    <string name="your_res_select_restaurant">Select restaurant</string>
+    <string name="your_res_amount_of_people">Amount of people</string>
+    <string name="your_res_empty_date">Select Date</string>
+    <string name="your_res_empty_time">Select Time</string>
+    <string name="your_res_child_chair">Child chair</string>
+    <string name="your_res_place_registration">PLACE RESERVATION</string>
+    <string name="res_not_valid_phone">Phone are required</string>
+    <string name="res_not_valid_name">Name are required</string>
+    <string name="res_not_valid_date">Date and time must be selected</string>
+    <string name="res_not_valid_restaurant">Restaurant must be selected</string>
+    <string name="res_not_valid_people_amount">The amount of people must be at least 1</string>
+    <string name="res_not_available_reservation">Sorry, but reservation of restaurant are not available</string>
+
+    <!--Select location-->
+    <string name="select_location_toolbar_title">Select location</string>
+    <string name="select_location_restaurant_close_time">Closes in %1$s</string>
+    <string name="select_location_open">Open</string>
+    <string name="select_location_close">Close</string>
+    <string name="select_location_open_at">Open in %1$s</string>
+    <string name="select_location_closes_at">Close in %1$s</string>
+
+    <!--Change data screens-->
+    <string name="change_data_amount_people">Amount of people</string>
+    <string name="change_data_child_chair">Child chair</string>
+    <string name="change_data_table_number">Number of tables</string>
+    <string name="change_data_promo_code">Promo code</string>
+    <string name="change_data_comment">Comment</string>
+
+    <!--Detail dish selection-->
+    <string name="detail_dish_size">Size</string>
+    <string name="detail_dish_size_text">%1$s\n$%2$s</string>
+    <string name="detail_dish_crust">Crust</string>
+    <string name="detail_dish_modifier">Modifier</string>
+    <string name="detail_dish_add_to_cart">ADD TO CART</string>
+    <string name="detail_dish_edit">EDIT</string>
+    <string name="detail_dish_or">or</string>
+    <string name="detail_dish_price_format">$%1$s</string>
+    <string name="detail_dish_exclude">Exclude</string>
+
+    <!--Cart-->
+    <string name="cart_toolbar_title">Cart</string>
+    <string name="cart_checkout">CHECKOUT</string>
+    <string name="cart_dish_size_format">Size: %1$s</string>
+    <string name="cart_dish_modifier_format_category">%1$s:</string>
+    <string name="cart_dish_name_many_format">%1$s x %2$s</string>
+    <string name="cart_dish_mandatory_modifier_title_format">%1$s: </string>
+    <string name="cart_dish_mandatory_modifier_value_format"> %1$s,</string>
+    <string name="cart_dish_modifier_format">%1$s: %2$s</string>
+    <string name="cart_dish_checked_modifier_value_format">%1$s</string>
+    <string name="cart_dish_counter_modifier_value_format">%1$s x %2$d</string>
+    <string name="cart_dish_counter_modifier_value_format_comma">%1$s x %2$d,</string>
+    <string name="cart_restaurant_address_format">%1$s %2$s</string>
+    <string name="cart_not_valid_total_sum">Your total price should be more than %1$s$</string>
+
+    <!--Checkout-->
+    <string name="checkout_btn_title">CHECKOUT</string>
+    <string name="checkout_delivered">Delivery</string>
+    <string name="checkout_total_item">%1$s items</string>
+
+    <!--Delivery time-->
+    <string name="delivery_time_toolbar_title">Delivery time</string>
+    <string name="delivery_time_as_soon">As soon as possible</string>
+    <string name="delivery_time_specific_time">Specific time</string>
+
+    <!--Select payment method-->
+    <string name="pay_method_you_have">You have enough loyalty points. Your current balance is <b>%1$s LP</b></string>
+    <string name="pay_method_low_points">You don\’t have enough loyalty points. Your current balance is <b>%1$s LP</b></string>
+    <string name="pay_method_loyalty_points">Loyalty points</string>
+    <string name="pay_method_your_card">Your card</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!--Details map-->
+    <string name="details_map_toolbar_title_default">Details map</string>
+    <string name="details_map_build_route">Build a route</string>
+
+    <!--Notification formats-->
+    <string name="notif_tap_for_open">Tap for open app</string>
+
+    <!--Add card fragment-->
+    <string name="add_card_toolbar_title">Add card</string>
+    <string name="add_card_edit_toolbar_title">Edit card</string>
+    <string name="add_card_btn_txt">SAVE</string>
+    <string name="add_card_confirm_before">Confirm before adding card</string>
+    <string name="add_card_complete_form">Please complete the form</string>
+
+</resources>

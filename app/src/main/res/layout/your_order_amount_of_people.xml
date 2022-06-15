@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/amountOfPeopleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:layout_marginBottom="@dimen/your_orders_delivery_to_address_map_margin_top"
+        android:fontFamily="@font/avenir_next_regular"
+        android:text="@string/your_res_amount_of_people"
+        android:textColor="@color/darkGreyProfile65" />
+
+    <RelativeLayout
+        android:id="@+id/changeAmountPeople"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_amount_of_people_height"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/amountText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/am_of_people_amount_text_margin_start"
+            android:fontFamily="@font/avenir_next_regular"
+            android:text="@string/your_res_amount_of_people"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/am_of_people_text_size" />
+
+        <TextView
+            android:id="@+id/amount_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/am_of_people_amount_text_margin_start"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="0"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/am_of_people_text_size" />
+
+        <TextView
+            android:id="@+id/changeCountPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/am_of_people_amount_text_margin_end"
+            android:fontFamily="@font/avenir_next_regular"
+            android:text="@string/your_res_contact_change"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:textSize="@dimen/am_of_people_text_size" />
+
+    </RelativeLayout>
+
+</LinearLayout>

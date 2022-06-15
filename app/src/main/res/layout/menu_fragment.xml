@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:fitsSystemWindows="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/menuAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/menuCollapsingToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_collapsing_toolbar_height"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/menuIv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/dish_background1"
+                app:layout_collapseMode="parallax" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/colorDarkTransparent2" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/menuIvIcon"
+                    android:layout_width="@dimen/menu_iv_icon_weight"
+                    android:layout_height="@dimen/menu_iv_icon_height"
+                    android:layout_marginStart="@dimen/menu_iv_icon_margin_start"
+                    android:adjustViewBounds="true"
+                    android:src="@mipmap/logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/menuDeliveryFromContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/menu_delivery_from_container_margin_bottom"
+                    android:layout_marginTop="@dimen/menu_delivery_from_container_margin_top"
+                    android:clickable="true"
+                    android:background="@drawable/menu_delivery_from_container_background"
+                    android:gravity="right"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/menu_delivery_from_container_padding_top"
+                    android:paddingEnd="@dimen/menu_delivery_from_container_padding_end"
+                    android:paddingStart="@dimen/menu_delivery_from_container_padding_start"
+                    android:paddingTop="@dimen/menu_delivery_from_container_padding_top"
+                    app:layout_constraintBottom_toBottomOf="@+id/menuIvIcon"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/menuIvIcon">
+
+                    <TextView
+                        android:id="@+id/menuTvDeliveryFromTitle"
+                        style="@style/menuTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir_next_demi_bold"
+                        android:text="Delivery From"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/menu_delivery_from_container_text" />
+
+                    <TextView
+                        android:id="@+id/menuTvDeliveryFromPlace"
+                        style="@style/menuTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/menu_delivery_from_container_from_place_margin"
+                        android:fontFamily="@font/avenir_next_demi_bold"
+                        android:text="Restaurant 1," />
+
+                    <TextView
+                        android:id="@+id/menuTvDeliveryFromStreet"
+                        style="@style/menuTextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir_next_medium"
+                        android:text="49 Featherstone Str." />
+
+                </LinearLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/menuToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/menu_hor_dish_height"
+            android:background="@color/greyMenuDivide"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/menuFiltersContainer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_hor_dish_height2"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/searchBtn"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/menu_search_disable"/>
+
+                <RelativeLayout
+                    android:id="@+id/searchLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:gravity="center_vertical">
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/searchEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/colorWhite"
+                        android:layout_toLeftOf="@+id/cleanSearch"
+                        android:layout_marginEnd="@dimen/menu_hor_dish_search_margin_8"
+                        android:fontFamily="@font/avenir_next_regular"
+                        android:singleLine="true"
+                        android:hint="@string/search" />
+
+                    <ImageView
+                        android:id="@+id/cleanSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_close_grey"
+                        android:layout_marginEnd="@dimen/menu_hor_dish_search_margin_8"
+                        android:layout_toLeftOf="@+id/cancelBtnTxt"/>
+
+                    <TextView
+                        android:id="@+id/cancelBtnTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingEnd="16dp"
+                        android:paddingStart="@dimen/menu_hor_dish_search_margin_8"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center_vertical"
+                        android:textSize="16sp"
+                        android:textColor="@color/bottomMenuTextGreen"
+                        android:fontFamily="@font/avenir_next_regular"
+                        android:text="@string/cancel"/>
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/dishCategoryRV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/menu_hor_dish_height"
+                    android:layout_marginStart="3dp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/menuDevider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/menu_divide_height"
+                android:background="@color/greyMenuDivide" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"/>
+
+    <app.client.munchbear.munchbearclient.utils.MunchBearViewPager
+        android:id="@+id/menuViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/allDishRV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/yourCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_cart_height"
+        android:layout_gravity="bottom"
+        android:paddingEnd="@dimen/menu_cart_img_star_margin_end2"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/menu_cart_margin_start"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:text="@string/pay_method_your_card"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cartTotalDollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/menu_cart_margin_end"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text="$21.00"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/menu_cart_text_size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cartTotalPoint"
+            app:layout_constraintEnd_toStartOf="@+id/orTxt" />
+
+        <TextView
+            android:id="@+id/orTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/menu_cart_margin_end"
+            android:fontFamily="@font/avenir_next_medium"
+            android:text="@string/detail_dish_or"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/menu_cart_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageStar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.48000002" />
+
+        <ImageView
+            android:id="@+id/imageStar"
+            android:layout_width="@dimen/menu_cart_img_star"
+            android:layout_height="@dimen/menu_cart_img_star"
+            android:layout_marginEnd="@dimen/menu_cart_img_star_margin_end"
+            android:src="@mipmap/star_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cartTotalPoint"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cartTotalPoint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_bold"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/menu_cart_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

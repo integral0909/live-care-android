@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="@dimen/custom_del_tab_text"
+    android:textColor="@drawable/modifier_tab_title_color"
+    android:gravity="center"
+    android:paddingTop="@dimen/custom_del_tab_padding"
+    android:paddingLeft="@dimen/custom_del_tab_padding"
+    android:paddingRight="@dimen/custom_del_tab_padding"
+    android:fontFamily="@font/avenir_next_demi_bold">
+
+</TextView>

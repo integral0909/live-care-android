@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/changeWhen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/deliveryToTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/your_res_when"/>
+
+    <RelativeLayout
+        android:id="@+id/whenCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_when_height"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/your_orders_delivery_to_address_map_margin_top"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/whenDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:layout_marginStart="@dimen/your_orders_when_marginStart"
+            android:layout_marginEnd="@dimen/your_orders_when_marginEnd"
+            android:textSize="@dimen/your_orders_be_delivery_mins_text"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"/>
+
+        <TextView
+            android:id="@+id/whenTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:clickable="true"
+            android:layout_marginEnd="@dimen/your_orders_when_marginStart"
+            android:textSize="@dimen/your_orders_be_delivery_mins_text"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

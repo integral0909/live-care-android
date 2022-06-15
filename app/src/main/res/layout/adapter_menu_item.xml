@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootContainer"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/menu_item_height">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/ivMenuItem"
+        android:layout_width="@dimen/sub_menu_iv_menu_item_width"
+        android:layout_height="@dimen/sub_menu_iv_menu_item_width"
+        android:layout_marginBottom="@dimen/menu_item_img_margin_bottom"
+        android:layout_marginTop="@dimen/menu_item_img_margin_top"
+        android:layout_marginStart="@dimen/menu_item_img_margin_start"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/dish_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="@dimen/sub_menu_iv_corner_radius" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/containerMenuDetails"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/menu_item_container_menu_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivMenuItem"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvMenuItemTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:text="Taco"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/sub_menu_tv_title_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/tvMenuItemExplanation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvMenuItemExplanation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/avenir_next_regular"
+            android:gravity="left|center"
+            android:maxLines="3"
+            android:text="Classic marinara sauce, authentic old-world pepperoni, all-natural..."
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/sub_menu_tv_menu_item_explanation_text_size"
+            app:layout_constraintBottom_toTopOf="@+id/tvMenuItemPrice"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvMenuItemTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvMenuItemTitle" />
+
+        <TextView
+            android:id="@+id/tvMenuItemPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_bold"
+            android:gravity="left|center"
+            android:singleLine="true"
+            android:layout_marginTop="@dimen/menu_item_price_margin_top"
+            android:text="$20.00"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/sub_menu_tv_menu_item_price_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/tvMenuItemExplanation"
+            app:layout_constraintTop_toBottomOf="@+id/tvMenuItemExplanation" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

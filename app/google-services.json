@@ -1,0 +1,113 @@
+{
+  "project_info": {
+    "project_number": "464619254460",
+    "firebase_url": "https://munchbearpush.firebaseio.com",
+    "project_id": "munchbearpush",
+    "storage_bucket": "munchbearpush.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464619254460:android:b766912143aa7620",
+        "android_client_info": {
+          "package_name": "app.client.munchbear.munchbearclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464619254460-hpj4tthancdut7n1ca3a3o7h4dtb3b51.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.client.munchbear.munchbearclient",
+            "certificate_hash": "253d36053332219e1614b0a27eac81cd63c811d6"
+          }
+        },
+        {
+          "client_id": "464619254460-qnr7nq67oki1vf5f1qugjttunekko7pk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrf0RLo2RPFYNVxY6wbbmt8sxCycPQpH0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464619254460-qnr7nq67oki1vf5f1qugjttunekko7pk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "464619254460-gujhio2c17li708nmdb0d6ot7vu89u4k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "munchBearOwner"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464619254460:android:03d7d9e812a9d47a",
+        "android_client_info": {
+          "package_name": "app.foodgenie.foodgenie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464619254460-5ls7b2arddf8eh1gv3rp3t60lmn7ai35.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.foodgenie.foodgenie",
+            "certificate_hash": "9dff17b287117121f9692dd06111df1376a6ebd4"
+          }
+        },
+        {
+          "client_id": "464619254460-qnr7nq67oki1vf5f1qugjttunekko7pk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrf0RLo2RPFYNVxY6wbbmt8sxCycPQpH0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464619254460-qnr7nq67oki1vf5f1qugjttunekko7pk.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "464619254460-gujhio2c17li708nmdb0d6ot7vu89u4k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "munchBearOwner"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

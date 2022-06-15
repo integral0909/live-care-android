@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootPromoCodeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:layout_marginTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/promoCodeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/your_orders_promo_code"/>
+
+    <RelativeLayout
+        android:id="@+id/promoCodeInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_order_payment_height"
+        android:gravity="center_vertical"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/promoCodeIcon"
+            android:layout_width="@dimen/your_orders_promo_ic_width"
+            android:layout_height="@dimen/your_orders_promo_ic_height"
+            android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/promo_code_ico"/>
+
+        <TextView
+            android:id="@+id/promocodeTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+            android:textSize="@dimen/your_orders_customer_text"
+            android:layout_toRightOf="@+id/promoCodeIcon"
+            android:layout_centerVertical="true"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/avenir_next_regular"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/promoCodeMethod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/your_orders_promo_text_size"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/your_orders_promo_change_margin_end"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/your_res_contact_change"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emptyPromoCode"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_order_payment_height"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:visibility="gone"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/your_orders_promo_empty_margin_end"
+            android:textSize="@dimen/your_orders_promo_empty_text_size"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/your_orders_promo_code_empty"/>
+
+        <ImageView
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_arrow_margin_end"
+            android:src="@mipmap/arrow_open_green"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

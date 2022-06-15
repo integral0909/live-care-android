@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/orderDeliveryToLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/deliveryToTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:layout_marginBottom="@dimen/your_orders_delivery_to_address_map_margin_top"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/your_orders_delivery_to"/>
+
+    <LinearLayout
+        android:id="@+id/deliveryTabMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tabTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:textColor="@color/bottomMenuDarkGrey"
+                android:text="Delivery"/>
+
+            <View
+                android:id="@+id/underLine1"
+                android:layout_width="75dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="3dp"
+                android:visibility="invisible"
+                android:background="@color/bottomMenuTextGreen"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tabTitle2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:textColor="@color/bottomMenuDarkGrey"
+                android:text="Pick up"/>
+
+            <View
+                android:id="@+id/underLine2"
+                android:layout_width="75dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="3dp"
+                android:visibility="invisible"
+                android:background="@color/bottomMenuTextGreen"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tabTitle3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/avenir_next_demi_bold"
+                android:textColor="@color/bottomMenuDarkGrey"
+                android:text="Eat-in"/>
+
+            <View
+                android:id="@+id/underLine3"
+                android:layout_width="75dp"
+                android:layout_height="3dp"
+                android:visibility="invisible"
+                android:layout_marginTop="3dp"
+                android:background="@color/bottomMenuTextGreen"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/deliveryTabDivideLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_page_sel_res_divide_height"
+        android:background="@color/divideGrey"/>
+
+    <RelativeLayout
+        android:id="@+id/addressCard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_delivery_height"
+        android:background="@color/colorWhite"
+        android:clickable="true">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/mapLayer"
+            android:layout_width="@dimen/profile_delivery_google_width"
+            android:layout_height="@dimen/profile_delivery_google_height"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start">
+
+            <ImageView
+                android:id="@+id/deliveryMap"
+                android:layout_width="@dimen/profile_delivery_google_width"
+                android:layout_height="@dimen/profile_delivery_google_height"
+                android:layout_centerVertical="true"
+                android:scaleType="centerCrop"/>
+
+            <ImageView
+                android:id="@+id/mapMarker"
+                android:layout_width="21dp"
+                android:layout_height="36dp"
+                android:layout_marginBottom="18dp"
+                app:layout_constraintBottom_toBottomOf="@+id/deliveryMap"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/deliveryMap" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/emptyAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/mapLayer"
+            android:gravity="center"
+            android:visibility="gone"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textSize="@dimen/profile_name_text"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/profile_empty_address"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start"
+            android:layout_marginEnd="@dimen/profile_delivery_margin_end"/>
+
+        <LinearLayout
+            android:id="@+id/addressFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_delivery_margin_end"
+            android:layout_marginStart="@dimen/profile_avatar_margin_start"
+            android:layout_toRightOf="@+id/mapLayer"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/postIndex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/profile_delivery_text" />
+
+            <TextView
+                android:id="@+id/street"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/profile_delivery_text" />
+
+            <TextView
+                android:id="@+id/cityAndCountry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/darkGrey"
+                android:textSize="@dimen/profile_delivery_text" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrowChangeAddress"
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/delivery_address_add_address_item_margin_bottom"
+            android:clickable="true"
+            android:src="@mipmap/arrow_open_green" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/hintViewPager"
+            android:clickable="true"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <View
+            android:id="@+id/divide2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/main_page_sel_res_divide_height2"
+            android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+            android:layout_marginEnd="@dimen/your_orders_delivery_padding_start_end"
+            android:background="@color/divideGrey"
+            android:layout_alignParentBottom="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/asSoonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_delivery_to_as_soon_height"
+        android:gravity="center_vertical"
+        android:background="@color/colorWhite"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/your_orders_delivery_to_clock_size"
+            android:layout_height="@dimen/your_orders_delivery_to_clock_size"
+            android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+            android:src="@mipmap/ic_clock_grey"/>
+
+        <TextView
+            android:id="@+id/asSoonTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/your_orders_delivery_to_as_soon_margin_start"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:textSize="@dimen/your_orders_delivery_to_as_soon_text"
+            android:text="@string/your_orders_as_soon"/>
+
+        <TextView
+            android:id="@+id/deliveryTimeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/your_orders_delivery_time_date_margin_start"
+            android:textSize="@dimen/your_orders_delivery_time_date_text"
+            android:visibility="gone"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="25 June 2018"/>
+
+        <TextView
+            android:id="@+id/deliveryTimeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/your_orders_delivery_time_time_margin_start"
+            android:textSize="@dimen/your_orders_delivery_time_date_text"
+            android:visibility="gone"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="12:00 pm"/>
+
+    </LinearLayout>
+
+</LinearLayout>

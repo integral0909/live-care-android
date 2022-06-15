@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/SizeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divideGrey"
+    android:paddingTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sizeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/detail_dish_size"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/sizeRV"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/detail_dish_size_height"
+        android:clipToPadding="false"
+        android:paddingEnd="@dimen/detail_dish_size_list_padding_end"
+        android:paddingTop="@dimen/detail_dish_size_list_padding_top"
+        android:paddingBottom="@dimen/detail_dish_size_list_padding_bottom"
+        android:layout_gravity="center_vertical"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:background="@color/colorWhite"/>
+
+</LinearLayout>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.client.munchbear.munchbearclient">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name=".FoodClientApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.TransparentTheme">
+
+        <activity android:name=".view.LoadActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.MainActivity"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".view.LoginStarterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme" />
+        <activity
+            android:name=".view.LoginMainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.NewAddressEditActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.ChangeProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.PreMenuActivity"
+            android:theme="@style/AppTheme.WhiteTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.YourOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.YourReservationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.SelectLocationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.ChangeDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".view.CartActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.CheckoutActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.DeliveryTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.SelectPayMethodActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+        <activity
+            android:name=".view.DetailsMapActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.TransparentTheme"
+            android:windowSoftInputMode="adjustPan|stateUnchanged" />
+
+        <!-- Facebook -->
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".view.UserLocationBaseActivity" />
+        <activity android:name=".view.SocLoginActivity" />
+
+        <!--Google meta-data-->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!--Fabric meta-data-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="caf273bb6112f8e743f0c0a063c53014c3eade62" />
+
+        <!-- Facebook meta-data -->
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <!--Services-->
+        <service
+            android:name=".utils.firebase.FirebaseInstanceService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".utils.firebase.FBMessengerService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    </application>
+
+</manifest>

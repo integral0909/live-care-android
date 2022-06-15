@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divideGrey">
+
+    <RelativeLayout
+        android:id="@+id/customToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/profile_bar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/avenir_next_demi_bold"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/profile_bar_padding_top"
+            android:paddingBottom="@dimen/profile_bar_padding_bottom"
+            android:text="Select payment method"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/profile_bar_title_text" />
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="@dimen/delivery_address_back_ic_width"
+            android:layout_height="@dimen/delivery_address_back_ic_height"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/delivery_address_back_ic_padding"
+            android:src="@mipmap/arrow_back_grey" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/customToolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/cashLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/your_orders_order_payment_height"
+                android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+                android:background="@color/colorWhite"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/paymentMethodIcon"
+                    android:layout_width="@dimen/sel_pay_meth_cash_ic_size"
+                    android:layout_height="@dimen/sel_pay_meth_cash_ic_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+                    android:src="@mipmap/ic_dollar" />
+
+                <TextView
+                    android:id="@+id/paymentType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+                    android:layout_toRightOf="@+id/paymentMethodIcon"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:text="@string/your_orders_cash"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/your_orders_customer_text" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/loyaltyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/your_orders_order_payment_height"
+                android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+                android:background="@color/colorWhite"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/loyaltyMethodIcon"
+                    android:layout_width="@dimen/sel_pay_meth_cash_ic_size"
+                    android:layout_height="@dimen/sel_pay_meth_cash_ic_size"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/sel_pay_meth_ic_star_margin_start"
+                    android:src="@mipmap/star_black" />
+
+                <TextView
+                    android:id="@+id/loyaltyType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+                    android:layout_toRightOf="@+id/loyaltyMethodIcon"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:text="@string/pay_method_loyalty_points"
+                    android:textColor="@color/darkGrey"
+                    android:textSize="@dimen/your_orders_customer_text" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/loyaltyBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/sel_pay_meth_points_text_margin"
+                android:layout_marginTop="@dimen/sel_pay_meth_points_text_margin_top"
+                android:layout_marginEnd="@dimen/sel_pay_meth_points_text_margin"
+                android:fontFamily="@font/avenir_next"
+                android:textColor="@color/bottomMenuTextGreen"
+                android:textSize="@dimen/sel_pay_meth_points_text_size"
+                android:visibility="gone" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:id="@+id/nestedScrollViewCards"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:id="@+id/divide"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/main_page_sel_res_divide_height"
+                        android:background="@color/divideGrey" />
+
+                    <TextView
+                        android:id="@+id/cardsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/payment_card_your_card_title_margin_start"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="@dimen/payment_card_your_card_title_margin_bottom"
+                        android:fontFamily="@font/avenir_next_demi_bold"
+                        android:text="@string/payment_met_toolbar_title"
+                        android:textColor="@color/darkGreyProfile65"
+                        android:textSize="@dimen/payment_card_your_card_title_text"
+                        android:visibility="gone" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/cardRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                    <TextView
+                        android:id="@+id/addCardBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/payment_card_card_height"
+                        android:background="@color/colorWhite"
+                        android:clickable="true"
+                        android:fontFamily="@font/avenir_next_medium"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/payment_card_your_card_title_margin_start"
+                        android:text="@string/payment_met_add_card"
+                        android:textColor="@color/bottomMenuTextGreen"
+                        android:textSize="@dimen/payment_card_add_card_text" />
+
+                </LinearLayout>
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:theme="@style/AppTheme.WhiteActionBar"
+        android:visibility="gone" />
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</RelativeLayout>

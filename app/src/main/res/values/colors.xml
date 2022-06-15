@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#77DC00</color>
+    <color name="colorPrimaryDark">#77dc00</color>
+    <color name="colorAccent">#77dc00</color>
+
+    <!--Main colors-->
+    <color name="colorWhite">#ffffff</color>
+    <color name="opacity0">#00000000</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#77dc00</color>
+    <color name="colorBlue">#4688f1</color>
+    <color name="darkGrey">#4d4d4d</color>
+    <color name="GreyCA">#CACACA</color>
+    <color name="colorDarkTransparent">#68000000</color>
+    <color name="colorDarkTransparent2">#aa000000</color>
+    <color name="colorBlackOpacity23">#2e000000</color>
+
+    <!--Custom colors-->
+    <color name="facebookBlue">#3a589b</color>
+    <color name="bottomMenuDarkGrey">#A9AAAE</color>
+    <color name="bottomMenuTextGreen">#43A422</color>
+    <color name="bottomMenuTextGrey">#979797</color>
+    <color name="bottomMenuDivideGrey">#E5E5E5</color>
+    <color name="badgeRed">#F56223</color>
+    <color name="divideGrey">#F2F2F4</color>
+    <color name="darkGreyProfile">#15181F</color>
+    <color name="darkGreyProfile65">#63666A</color>
+    <color name="darkGreyB6">#B6B6B6</color>
+    <color name="darkGreyProfile87">#646464</color>
+    <color name="greyMenuDivide">#CACACA</color>
+    <color name="greyMap">#DDDDDD</color>
+    <color name="greenZoneInside">#2477dc00</color>
+    <color name="greyLoyalty">#A5A5A5</color>
+
+
+</resources>

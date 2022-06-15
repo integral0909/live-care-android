@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/orderTableNumberLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:layout_marginTop="@dimen/your_orders_delivery_to_margin_top"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/your_orders_delivery_padding_start_end"
+        android:fontFamily="@font/avenir_next_regular"
+        android:textColor="@color/darkGreyProfile65"
+        android:text="@string/your_orders_number_of_table"/>
+
+    <RelativeLayout
+        android:id="@+id/tableInfoLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_order_payment_height"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top">
+
+        <TextView
+            android:id="@+id/numberOfTable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/your_orders_delivery_padding_start_end"
+            android:textSize="@dimen/your_orders_customer_text"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@font/avenir_next_bold"
+            android:background="@color/colorWhite"
+            android:text="0"/>
+
+        <TextView
+            android:id="@+id/changeTableNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/your_orders_table_text_size"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/your_orders_table_margin_end"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/your_res_contact_change"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/emptyTable"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/your_orders_order_payment_height"
+        android:layout_marginTop="@dimen/your_orders_customer_margin_top"
+        android:visibility="gone"
+        android:background="@color/colorWhite">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/your_orders_table_margin_start"
+            android:textSize="@dimen/your_orders_table_text_size"
+            android:fontFamily="@font/avenir_next_regular"
+            android:textColor="@color/bottomMenuTextGreen"
+            android:text="@string/your_orders_table_empty"/>
+
+        <ImageView
+            android:layout_width="@dimen/profile_arrow_width"
+            android:layout_height="@dimen/profile_arrow_height"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/profile_arrow_margin_end"
+            android:src="@mipmap/arrow_open_green"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

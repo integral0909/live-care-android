@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/profile_delivery_height"
+    android:background="@color/colorWhite"
+    android:layout_marginBottom="@dimen/delivery_address_add_address_item_margin_bottom"
+    android:clickable="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/mapLayer"
+        android:layout_width="@dimen/profile_delivery_google_width"
+        android:layout_height="@dimen/profile_delivery_google_height"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/profile_avatar_margin_start">
+
+        <ImageView
+            android:id="@+id/map"
+            android:layout_width="@dimen/profile_delivery_google_width"
+            android:layout_height="@dimen/profile_delivery_google_height"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"/>
+
+        <ImageView
+            android:id="@+id/mapMarker"
+            android:layout_width="21dp"
+            android:layout_height="36dp"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/map" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/profile_delivery_margin_end"
+        android:layout_marginStart="@dimen/profile_avatar_margin_start"
+        android:layout_toRightOf="@+id/mapLayer"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/postIndex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_regular"
+            android:text="54 555 "
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/profile_delivery_text" />
+
+        <TextView
+            android:id="@+id/streetAndHouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_regular"
+            android:text="49 Featherstone Str  "
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/profile_delivery_text" />
+
+        <TextView
+            android:id="@+id/cityAndCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_regular"
+            android:text="New York USA"
+            android:textColor="@color/darkGrey"
+            android:textSize="@dimen/profile_delivery_text" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/dotsMore"
+        android:layout_width="@dimen/delivery_address_add_address_dots_width"
+        android:layout_height="@dimen/delivery_address_add_address_dots_height"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/delivery_address_add_address_dots_margin_end"
+        android:clickable="true"
+        android:src="@mipmap/more_vertical_dots" />
+
+</RelativeLayout>
