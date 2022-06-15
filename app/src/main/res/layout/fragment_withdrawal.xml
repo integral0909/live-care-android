@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBackground"
+    tools:context=".fragments.main.Transactions.transactions.WithdrawalFragment">
+
+    <TextView
+        android:id="@+id/txtTotalAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/txtTotalAmount"
+        android:paddingTop="@dimen/margin_big"
+        android:paddingBottom="@dimen/margin_ssmall"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:text="@string/total_transaction_amount"
+        android:textSize="@dimen/font_title"
+        android:textColor="@color/textBlack"
+        android:fontFamily="@font/lato_regular"/>
+
+    <TextView
+        android:id="@+id/txtTotalAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultBackground"
+        app:layout_constraintStart_toEndOf="@id/txtTotalAmountLabel"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="@dimen/margin_big"
+        android:paddingBottom="@dimen/margin_ssmall"
+        android:paddingStart="@dimen/margin_ssmall"
+        android:paddingEnd="@dimen/margin_ssmall"
+        android:text="$0.00"
+        android:textSize="@dimen/font_title"
+        android:textColor="@color/textBlack"
+        android:fontFamily="@font/lato_bold"/>
+
+    <TextView
+        android:id="@+id/txtDisSpending"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTotalAmountLabel"
+        app:layout_constraintEnd_toStartOf="@id/switchSpending"
+        android:paddingTop="@dimen/margin_normal"
+        android:paddingBottom="@dimen/margin_big"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:text="@string/is_this_dis_spending"
+        android:textSize="@dimen/font_title"
+        android:textColor="@color/textBlack"
+        android:fontFamily="@font/lato_regular"/>
+
+    <Switch
+        android:id="@+id/switchSpending"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/txtDisSpending"
+        app:layout_constraintTop_toTopOf="@id/txtDisSpending"
+        app:layout_constraintBottom_toBottomOf="@id/txtDisSpending"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/margin_big"
+        android:checked="true"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@color/separator_line_gray"
+        app:layout_constraintEnd_toStartOf="@+id/gridView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtDisSpending">
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtDate"
+            app:layout_constraintBottom_toBottomOf="@id/edtDate"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_date"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <TextView
+            android:id="@+id/edtDate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="@dimen/separator_line"
+            app:layout_constraintStart_toEndOf="@id/txtDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:gravity="center_vertical|start"
+            android:background="@color/defaultBackground"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_select_date"/>
+
+        <TextView
+            android:id="@+id/txtConsumer"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtConsumer"
+            app:layout_constraintBottom_toBottomOf="@id/edtConsumer"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_consumer"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <Spinner
+            android:id="@+id/edtConsumer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/separator_line"
+            android:background="@color/defaultBackground"
+            android:fontFamily="@font/lato_regular"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:spinnerMode="dropdown"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtConsumer"
+            app:layout_constraintTop_toBottomOf="@id/edtDate" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtAmount"
+            app:layout_constraintBottom_toBottomOf="@id/edtAmount"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_amount"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="@dimen/separator_line"
+            app:layout_constraintStart_toEndOf="@id/txtAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtConsumer"
+            android:background="@color/defaultBackground"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_amount"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtDescription"
+            app:layout_constraintBottom_toBottomOf="@id/edtDescription"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_description"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <EditText
+            android:id="@+id/edtDescription"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/separator_line"
+            android:layout_marginBottom="@dimen/separator_line"
+            android:background="@color/defaultBackground"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_transaction_description"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtDescription"
+            app:layout_constraintTop_toBottomOf="@id/edtAmount" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_marginBottom="10dp"
+        android:columnWidth="75dp"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/margin_sssmall"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="@dimen/margin_ssmall"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignatureConsumer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <LinearLayout
+        android:id="@+id/btnSignatureConsumer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_unsignature_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignatureCaregiver"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_checkmark_black" />
+
+        <TextView
+            android:id="@+id/txtBtnSignatureConsumer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_ssmall"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/electronic_signature_of_user"
+            android:textColor="@color/buttonTextGray"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnSignatureCaregiver"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_margin="@dimen/margin_normal"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_unsignature_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_checkmark_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_ssmall"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/electronic_signature_of_caregiver"
+            android:textColor="@color/buttonTextGray"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

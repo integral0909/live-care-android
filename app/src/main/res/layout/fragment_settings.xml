@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.main.Settings.SettingsMainHomeFragment"
+    android:clickable="true"
+    android:focusable="true">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUserProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="@dimen/margin_bbbig"
+        android:src="@mipmap/user_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/txtAccountName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:text="Yurii.caregiver100"
+        android:textAlignment="center"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_title"
+        android:fontFamily="@font/lato_bold"
+        app:layout_constraintTop_toBottomOf="@+id/imgUserProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:text="@string/full_name"
+        android:textAlignment="center"
+        android:gravity="center_vertical|end"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/edtFullName"
+        app:layout_constraintTop_toTopOf="@+id/edtFullName"
+        app:layout_constraintBottom_toBottomOf="@+id/edtFullName" />
+
+    <TextView
+        android:id="@+id/edtFullName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="@dimen/margin_bbbig"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/background_round_cell"
+        android:gravity="center_vertical|start"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintBottom_toTopOf="@+id/edtEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtFullName"
+        app:layout_constraintTop_toBottomOf="@+id/txtAccountName" />
+
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:gravity="center_vertical|end"
+        android:textAlignment="center"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintStart_toStartOf="@+id/txtFullName"
+        app:layout_constraintEnd_toEndOf="@+id/txtFullName"
+        app:layout_constraintTop_toTopOf="@+id/edtEmail"
+        app:layout_constraintBottom_toBottomOf="@+id/edtEmail" />
+
+    <TextView
+        android:id="@+id/edtEmail"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@drawable/background_round_cell"
+        android:gravity="center_vertical|start"
+        android:fontFamily="@font/lato_regular"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_normal"
+        app:layout_constraintEnd_toEndOf="@+id/edtFullName"
+        app:layout_constraintStart_toStartOf="@+id/edtFullName"
+        app:layout_constraintTop_toBottomOf="@+id/edtFullName" />
+
+    <TextView
+        android:id="@+id/edtAppInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_bbbig"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:gravity="center_vertical|center"
+        android:fontFamily="@font/lato_regular"
+        android:text="App Info:   v0.4 / b00400 - DEV"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_description"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="56dp" />
+
+    <TextView
+        android:id="@+id/txtLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/background_blue_round_button"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="@string/logout"
+        android:textAlignment="center"
+        android:textColor="@color/textWhite"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

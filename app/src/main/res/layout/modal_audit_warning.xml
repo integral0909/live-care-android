@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/modal_background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_warning"
+        android:layout_marginTop="@dimen/margin_bbbig"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/warning_descriptoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bbbig"
+        android:fontFamily="@font/lato_regular"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/margin_normal"
+        android:paddingStart="@dimen/margin_huge"
+        android:paddingEnd="@dimen/margin_huge"
+        android:text="@string/amount_mismatch_warning"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_gravity="bottom"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/button_ok"
+        android:textColor="@color/textWhite"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_bold"/>
+</LinearLayout>

@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBackground"
+    android:focusable="true"
+    android:clickable="true"
+    android:orientation="vertical"
+    tools:context=".fragments.main.TripRequests.RiderDetailsFragment">
+
+    <TextView
+        android:id="@+id/txtRouteStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_ssmall"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="start|center_vertical"
+        android:padding="@dimen/margin_normal"
+        android:text="@string/label_ride_information"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small"
+        android:background="@drawable/cell_background_white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="CONSUMER:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spnConsumer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:background="@color/textWhite"
+                        android:focusable="false"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="@string/select_consumer"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <LinearLayout
+                        android:id="@+id/layoutOneway"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rdoOneWay"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:src="@mipmap/circle_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:text="@string/label_one_way"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutRoundTrip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/rdoRoundTrip"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:src="@mipmap/circle_not_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:text="@string/label_round_trip"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="PICKUP:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txtPickupAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="Enter origin Address"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="DROP-OFF:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/txtDropoffAddress"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="Enter Destination Address"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="DATE:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <TextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:fontFamily="@font/lato_regular"
+                        android:text=""
+                        android:hint="Select the Date"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="TIMING:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spnTiming"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:focusable="false"
+                        android:hint="Select the Timing"
+                        android:fontFamily="@font/lato_regular"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="TIME:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spnTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:fontFamily="@font/lato_regular"
+                        android:focusable="false"
+                        android:hint="Select the time"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutReturnDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="RETURN DATE:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_text" />
+
+                    <TextView
+                        android:id="@+id/txtReturnDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:fontFamily="@font/lato_regular"
+                        android:text=""
+                        android:hint="Select the Date"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutReturnTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="RETURN TIME:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_text" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/spnReturnTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="Select the Time"
+                        android:focusable="false"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutTBD"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/chkTBD"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_ssmall"
+                            android:src="@mipmap/rect_not_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_sssmall"
+                            android:text="TBD"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="CONTACT:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <EditText
+                        android:id="@+id/txtContact"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:fontFamily="@font/lato_regular"
+                        android:text=""
+                        android:hint="Enter the contact name"
+                        android:background="@color/textWhite"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"
+                        android:fontFamily="@font/lato_bold"
+                        android:text="PHONE:"
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+
+                    <EditText
+                        android:id="@+id/txtPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.65"
+                        android:background="@color/textWhite"
+                        android:fontFamily="@font/lato_regular"
+                        android:hint="Enter the contact phone"
+                        android:inputType="phone"
+                        android:text=""
+                        android:textColor="@color/textGray"
+                        android:textSize="@dimen/font_cell_title1" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/separator_line_gray" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutSpecialNeeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="SPECIAL NEEDS:"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/font_cell_title1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_big">
+
+                    <LinearLayout
+                        android:id="@+id/layoutWheelchair"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/chkWheelchair"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:src="@mipmap/rect_not_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:text="@string/label_wheelchair"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutWalker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/chkWalker"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:src="@mipmap/rect_not_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:text="@string/label_walker"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_small">
+                    <LinearLayout
+                        android:id="@+id/layoutDeaf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/chkDeaf"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:src="@mipmap/rect_not_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:text="@string/label_deaf"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutBlind"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/chkBlind"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:src="@mipmap/rect_not_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:text="@string/label_blind"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_big">
+                    <LinearLayout
+                        android:id="@+id/layoutServiceAnimal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/chkServiceAnimal"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:src="@mipmap/rect_not_selected_gray" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/margin_normal"
+                            android:text="@string/label_service_animal"
+                            android:textColor="@color/textGray"
+                            android:textSize="@dimen/font_cell_title1" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

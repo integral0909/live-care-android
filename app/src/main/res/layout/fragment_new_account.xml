@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/defaultBackground"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".fragments.main.Patients.AccountDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:background="@color/separator_line_gray">
+
+        <TextView
+            android:id="@+id/txtAccountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/defaultBackground"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="@dimen/margin_ssmall"
+            android:paddingBottom="@dimen/margin_ssmall"
+            android:text="Fred Jones"
+            android:textSize="@dimen/font_title"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/lato_bold"/>
+
+        <TextView
+            android:id="@+id/txtMerchant"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtMerchant"
+            app:layout_constraintBottom_toBottomOf="@id/edtMerchant"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_merchant"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <EditText
+            android:id="@+id/edtMerchant"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/separator_line"
+            android:background="@color/defaultBackground"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_merchant_name"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtMerchant"
+            app:layout_constraintTop_toBottomOf="@id/txtAccountName" />
+
+        <TextView
+            android:id="@+id/txtCardNumber"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtCardNumber"
+            app:layout_constraintBottom_toBottomOf="@id/edtCardNumber"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_card_number"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <EditText
+            android:id="@+id/edtCardNumber"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/separator_line"
+            android:background="@color/defaultBackground"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_card_number"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtCardNumber"
+            app:layout_constraintTop_toBottomOf="@id/edtMerchant" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtAmount"
+            app:layout_constraintBottom_toBottomOf="@id/edtAmount"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_amount"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/separator_line"
+            android:background="@color/defaultBackground"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_starting_balance"
+            android:inputType="numberDecimal"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:singleLine="true"
+            android:imeOptions="actionNext"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtAmount"
+            app:layout_constraintTop_toBottomOf="@id/edtCardNumber" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtDescription"
+            app:layout_constraintBottom_toBottomOf="@id/edtDescription"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_description"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <EditText
+            android:id="@+id/edtDescription"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginTop="@dimen/separator_line"
+            android:layout_marginBottom="@dimen/separator_line"
+            android:background="@color/defaultBackground"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_description"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:imeOptions="actionNext"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtDescription"
+            app:layout_constraintTop_toBottomOf="@id/edtAmount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/btnSignatureConsumer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/background_unsignature_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_checkmark_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_ssmall"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/electronic_signature_of_user"
+            android:textColor="@color/buttonTextGray"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnSignatureCaregiver"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/background_unsignature_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_checkmark_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_ssmall"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/electronic_signature_of_caregiver"
+            android:textColor="@color/buttonTextGray"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="5dp"
+            android:elevation="4dp"
+            android:background="@drawable/cell_background_white"
+            android:padding="@dimen/margin_ssmall">
+
+
+        <TextView
+            android:text="08/06/2019"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDate"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_cell_title"
+            android:layout_marginTop="@dimen/margin_ssmall"
+            android:layout_marginStart="@dimen/margin_sssmall"
+            android:layout_marginEnd="@dimen/margin_sssmall"
+            android:layout_marginBottom="@dimen/margin_sssmall"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtTime"
+            app:layout_constraintBottom_toTopOf="@+id/txtRouteStatus"/>
+
+        <TextView
+            android:text="9:18 AM"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTime"
+            android:fontFamily="@font/lato_bold"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/font_cell_title"
+            android:layout_marginStart="@dimen/margin_sssmall"
+            android:layout_marginEnd="@dimen/margin_sssmall"
+            app:layout_constraintTop_toTopOf="@+id/txtDate"
+            app:layout_constraintStart_toEndOf="@+id/txtDate"
+            app:layout_constraintEnd_toStartOf="@+id/iconRightArrow"
+            app:layout_constraintBottom_toBottomOf="@+id/txtDate"/>
+
+        <ImageView
+                android:id="@+id/iconRightArrow"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="@dimen/margin_sssmall"
+                app:layout_constraintTop_toTopOf="@+id/txtDate"
+                app:layout_constraintBottom_toBottomOf="@+id/txtDate"
+                app:layout_constraintStart_toEndOf="@+id/txtTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:src="@mipmap/ic_right"/>
+
+        <TextView
+            android:id="@+id/txtRouteStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_sssmall"
+            android:layout_marginTop="@dimen/margin_sssmall"
+            android:fontFamily="@font/lato_regular"
+            android:text="@string/en_route"
+            android:textColor="@color/separator_line_gray"
+            android:textSize="@dimen/font_cell_text"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_car"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtDate"
+            app:layout_constraintTop_toBottomOf="@+id/txtDate" />
+
+        <ImageView
+            android:id="@+id/icon_car"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginStart="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:scaleType="centerInside"
+            android:src="@mipmap/icon_car"
+            app:layout_constraintBottom_toTopOf="@+id/icon_map"
+            app:layout_constraintEnd_toStartOf="@+id/txtRouteStartAddress"
+            app:layout_constraintStart_toStartOf="@+id/txtRouteStatus"
+            app:layout_constraintTop_toBottomOf="@id/txtRouteStatus" />
+
+        <TextView
+                android:text="135 W. Park Avenue, Columbus, OH"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtRouteStartAddress"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/purple_color"
+                android:textSize="@dimen/font_cell_text"
+                android:layout_marginStart="@dimen/margin_small"
+                app:layout_constraintTop_toTopOf="@+id/icon_car"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_car"
+                app:layout_constraintStart_toEndOf="@+id/icon_car"
+                android:layout_marginEnd="@dimen/margin_normal"/>
+
+        <ImageView
+            android:id="@+id/icon_map"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:scaleType="centerInside"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintBottom_toTopOf="@+id/txtRouteConsumerName"
+            app:layout_constraintEnd_toStartOf="@+id/txtRouteEndAddress"
+            app:layout_constraintStart_toStartOf="@+id/icon_car"
+            app:layout_constraintTop_toBottomOf="@+id/icon_car"
+            android:src="@mipmap/icon_pin" />
+
+        <TextView
+                android:text="212 south Hight St, Columbus, OH"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtRouteEndAddress"
+                android:fontFamily="@font/lato_regular"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_cell_text"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintTop_toTopOf="@+id/icon_map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/icon_map"
+                app:layout_constraintStart_toEndOf="@+id/icon_map" />
+
+        <TextView
+            android:id="@+id/txtRouteConsumerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:layout_marginEnd="@dimen/margin_normal"
+            android:layout_marginBottom="@dimen/margin_ssmall"
+            android:fontFamily="@font/lato_regular"
+            android:text="Fred Jones"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/font_cell_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txtDate"
+            app:layout_constraintTop_toBottomOf="@+id/icon_map" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

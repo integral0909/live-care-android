@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:opacity="opaque">
+
+    <item android:drawable="@mipmap/splash4"/>
+
+
+    <item
+        android:id="@+id/logo_onseen"
+        android:bottom="60dp">
+
+        <bitmap
+            android:src="@mipmap/logo_onseen_small"
+            android:gravity="bottom"/>
+
+    </item>
+
+    <item
+        android:id="@+id/logo_livecare"
+        android:bottom="90dp">
+
+        <bitmap
+            android:src="@mipmap/logo_livecare"
+            android:gravity="bottom"/>
+
+    </item>
+
+
+</layer-list>

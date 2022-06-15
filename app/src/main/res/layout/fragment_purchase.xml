@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/defaultBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context=".fragments.main.Transactions.PurchaseFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtTotalAmountLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:background="@color/defaultBackground"
+                android:fontFamily="@font/lato_regular"
+                android:paddingTop="@dimen/margin_big"
+                android:paddingBottom="@dimen/margin_ssmall"
+                android:text="@string/total_transaction_amount"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/font_title"
+                app:layout_constraintEnd_toStartOf="@id/txtTotalAmount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtTotalAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/defaultBackground"
+                android:fontFamily="@font/lato_bold"
+                android:paddingStart="@dimen/margin_ssmall"
+                android:paddingTop="@dimen/margin_big"
+                android:paddingEnd="@dimen/margin_ssmall"
+                android:paddingBottom="@dimen/margin_ssmall"
+                android:text="$0.00"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/font_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/txtTotalAmountLabel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/viewData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@color/separator_line_gray"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtTotalAmountLabel">
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="@dimen/label_width_big"
+                    android:layout_height="0dp"
+                    android:background="@color/defaultBackground"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/label_date"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/font_label"
+                    app:layout_constraintBottom_toBottomOf="@id/edtDate"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/edtDate" />
+
+                <TextView
+                    android:id="@+id/edtDate"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edittext_height"
+                    android:background="@color/defaultBackground"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center_vertical|start"
+                    android:paddingStart="@dimen/margin_small"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/font_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txtDate"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtMerchant"
+                    android:layout_width="@dimen/label_width_big"
+                    android:layout_height="0dp"
+                    android:background="@color/defaultBackground"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/label_merchant"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/font_label"
+                    app:layout_constraintBottom_toBottomOf="@id/edtMerchant"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/edtMerchant" />
+
+                <EditText
+                    android:id="@+id/edtMerchant"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/separator_line"
+                    android:background="@color/defaultBackground"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="@string/hint_enter_merchant_name"
+                    android:paddingStart="@dimen/margin_small"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/font_normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txtMerchant"
+                    app:layout_constraintTop_toBottomOf="@id/edtDate" />
+
+                <TextView
+                    android:id="@+id/txtDescription"
+                    android:layout_width="@dimen/label_width_big"
+                    android:layout_height="0dp"
+                    android:background="@color/defaultBackground"
+                    android:fontFamily="@font/lato_regular"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/label_description"
+                    android:textColor="@color/textGray"
+                    android:textSize="@dimen/font_label"
+                    app:layout_constraintBottom_toBottomOf="@id/edtDescription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/edtDescription" />
+
+                <EditText
+                    android:id="@+id/edtDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginTop="@dimen/separator_line"
+                    android:layout_marginBottom="@dimen/separator_line"
+                    android:background="@color/defaultBackground"
+                    android:fontFamily="@font/lato_regular"
+                    android:hint="@string/hint_enter_transaction_description"
+                    android:paddingStart="@dimen/margin_small"
+                    android:paddingEnd="0dp"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/font_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/txtDescription"
+                    app:layout_constraintTop_toBottomOf="@id/edtMerchant" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/txtReceipt"
+                android:layout_width="@dimen/label_width_big"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:background="@color/defaultBackground"
+                android:fontFamily="@font/lato_regular"
+                android:gravity="end"
+                android:paddingTop="@dimen/margin_normal"
+                android:paddingBottom="@dimen/margin_big"
+                android:text="@string/label_receipt"
+                android:textColor="@color/textGray"
+                android:textSize="@dimen/font_label"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/viewData" />
+
+            <Switch
+                android:id="@+id/switchSpending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:checked="true"
+                app:layout_constraintBottom_toBottomOf="@id/txtReceipt"
+                app:layout_constraintStart_toEndOf="@+id/txtReceipt"
+                app:layout_constraintTop_toTopOf="@id/txtReceipt" />
+
+            <GridView
+                android:id="@+id/gridView"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:columnWidth="75dp"
+                android:gravity="center"
+                android:horizontalSpacing="@dimen/margin_ssmall"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="@dimen/margin_ssmall"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/txtReceipt" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_normal"
+                android:background="@color/defaultBackground"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/margin_sssmall"
+                android:paddingBottom="@dimen/margin_sssmall">
+
+                <TextView
+                    android:id="@+id/txtTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/lato_regular"
+                    android:text="@string/transaction_details"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/font_title" />
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:background="@drawable/background_circle_button"
+                    android:paddingBottom="1dp"
+                    android:text="+"
+                    android:textColor="@color/textWhite"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

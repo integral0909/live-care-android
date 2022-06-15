@@ -1,0 +1,164 @@
+<resources>
+    <string name="app_name">LiveCare</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_username">John Scott</string>
+    <string name="nav_header_email">test@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="press_back_button">Press back button again to exit app.</string>
+
+    <string name="username_or_email">Username or Email</string>
+    <string name="full_name">Full Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="logout">Logout</string>
+    <string name="if_you_have_no_account">If you have no account</string>
+    <string name="register_account">Register Account</string>
+    <string name="if_you_have_already_account">If you have already an account</string>
+    <string name="or">Or</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="and">and</string>
+    <string name="terms">Terms of Service</string>
+
+    <string name="select_role">Select Role</string>
+    <string-array name="roles">
+        <item>@string/select_role</item>
+        <item>Administrator</item>
+        <item>Executive Manager</item>
+        <item>Regional Manager</item>
+        <item>Caregiver Supervisor</item>
+        <item>Caregiver</item>
+    </string-array>
+
+    <string name="select_consumer">Select Consumer</string>
+    <string name="select_account">Select Account</string>
+
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_password_description">
+        We will send a link to reset password to your email.\n
+        You can change your password and try login with new password.
+    </string>
+    <string name="go_back_to_login">Go back to Login</string>
+
+    <string name="tab_consumers">Consumers</string>
+    <string name="tab_transactions">Transactions</string>
+    <string name="tab_transportation">Transportation</string>
+    <string name="tab_appointments">Appointments</string>
+
+    <string name="button_new_transaction">New Transaction</string>
+    <string name="button_audit_account">Audit Account</string>
+    <string name="button_delete">Delete</string>
+    <string name="label_consumer">Consumer :</string>
+    <string name="select_a_consumer">Select a consumer</string>
+    <string name="label_account">Account :</string>
+    <string name="hint_select_an_account">Select an account</string>
+    <string name="label_amount">Amount :</string>
+    <string name="hint_enter_amount">Enter amount</string>
+
+    <string name="label_spend">Spend :</string>
+    <string name="spend_amount">Spend amount</string>
+    <string name="label_redeposit">Redeposit :</string>
+    <string name="redeposit_amount">Redeposit amount</string>
+    <string name="label_pending">Pending :</string>
+    <string name="pending_amount">Pending amount</string>
+
+    <string name="label_item_name">Item Name :</string>
+    <string name="enter_consumer_name">Enter consumer name</string>
+    <string name="enter_Item_name">Enter Item Name</string>
+
+    <string name="electronic_signature_of_user">Electronic Signature of Petty Cash</string>
+    <string name="electronic_signature_of_caregiver">Electronic Signature of Caregiver</string>
+
+    <string name="transaction_details">Transaction Details</string>
+    <string name="receipt_details">Receipt Items:</string>
+
+    <string name="hint_search">Search&#8230;</string>
+
+    <string name="label_account_name">Account Name :</string>
+    <string name="hint_enter_account_name">Enter account name</string>
+    <string name="label_merchant">Merchant :</string>
+    <string name="hint_enter_merchant_name">Enter the merchant name</string>
+    <string name="label_card_number">Card Number :</string>
+    <string name="hint_enter_card_number">Enter the card number</string>
+    <string name="hint_enter_starting_balance">Enter the starting balance</string>
+    <string name="label_description">Description :</string>
+    <string name="hint_enter_description">Enter description</string>
+    <string name="hint_enter_transaction_description">Enter transaction description</string>
+
+    <string name="create_new_account">Create New Account</string>
+    <string name="signature">Signature</string>
+    <string name="button_clear">Clear</string>
+    <string name="button_save">Save</string>
+    <string name="button_submit">Submit</string>
+
+    <string name="new_transaction">New Transaction</string>
+    <string name="button_purchase">Purchase</string>
+    <string name="button_deposit">Deposit</string>
+    <string name="button_withdrawal">Withdrawal</string>
+
+    <string name="button_remove">Remove</string>
+    <string name="button_use_camera">Use Camera</string>
+    <string name="button_use_photo">Use Photo</string>
+
+    <string name="button_cancel">Cancel</string>
+    <string name="button_next">Next</string>
+    <string name="button_ok">OK</string>
+
+    <string name="please_count_the_amount">Please count the Petty Cash and enter the amount</string>
+    <string name="please_use_camera_to_take_photo_of_cash">Please use the camera on your device to take a photo of the cash</string>
+    <string name="amount_mismatch_warning">
+        The amount entered does not match the current ledger balance. Please recount and reenter the amount.
+    </string>
+
+    <string name="total_transaction_amount">Total Transaction Amount :</string>
+    <string name="label_date">Date :</string>
+    <string name="hint_select_date">Select a date</string>
+    <string name="hint_select_consumer">Select a consumer</string>
+    <string name="is_this_dis_spending">Is this for Discretionary Spending?</string>
+
+    <string name="label_receipt">Receipt :</string>
+    <string name="label_enter_receipt_detail">Enter Receipt Detail</string>
+    <string name="label_receipt_amount">Receipt Amount :</string>
+    <string name="label_receipt_date">Receipt Date :</string>
+    <string name="hint_receipt_amount">Enter receipt amount</string>
+    <string name="hint_receipt_date">Enter a receipt date</string>
+
+    <string name="label_deposit_remaining_cash">Deposit Remaining Cash</string>
+    <string name="label_deposit_details">Deposit Details :</string>
+    <string name="label_images">Images :</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_message">Message</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_logout">Logout</string>
+
+    <string name="pickup">Pickup:</string>
+    <string name="dropoff">Drop off:</string>
+
+    <!-- Transportation Status -->
+    <string name="en_route">EN ROUTE</string>
+    <string name="no_request">You have no requests</string>
+
+    <!-- Schedule a Ride -->
+    <string name="title_schedule_ride">Schedule a Ride</string>
+    <string name="title_recurring_ride">Recurring a Ride</string>
+    <string name="label_ride_information">RIDE INFORMATION</string>
+    <string name="label_recurring_trip">Recurring Trip</string>
+    <string name="label_one_way">ONE-WAY</string>
+    <string name="label_round_trip">ROUND TRIP</string>
+    <string name="label_wheelchair">Wheelchair</string>
+    <string name="label_walker">Walker</string>
+    <string name="label_deaf">Deaf</string>
+    <string name="label_blind">Blind</string>
+    <string name="label_service_animal">Service Animal</string>
+
+    <string name="label_yes">YES</string>
+    <string name="label_no">NO</string>
+
+</resources>

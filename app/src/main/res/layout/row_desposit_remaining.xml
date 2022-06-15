@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defaultBackground"
+    android:paddingTop="@dimen/margin_ssmall"
+    android:paddingStart="@dimen/margin_normal"
+    android:paddingEnd="@dimen/margin_normal"
+    android:paddingBottom="@dimen/margin_normal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:id="@+id/txtConsumer"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/edittext_height"
+            android:gravity="end|center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtConsumer"
+            app:layout_constraintBottom_toBottomOf="@id/edtConsumer"
+            android:text="@string/label_consumer"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_regular"/>
+
+        <TextView
+            android:id="@+id/edtConsumer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginStart="@dimen/margin_small"
+            android:gravity="start|center_vertical"
+            app:layout_constraintStart_toEndOf="@id/txtConsumer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/defaultBackground"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_regular" />
+
+        <TextView
+            android:id="@+id/txtAccount"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/edittext_height"
+            android:gravity="end|center_vertical"
+            android:paddingBottom="@dimen/margin_ssmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtAccount"
+            app:layout_constraintBottom_toBottomOf="@id/edtAccount"
+            android:text="@string/label_account"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_regular"/>
+
+        <TextView
+            android:id="@+id/edtAccount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginStart="@dimen/margin_small"
+            android:background="@color/defaultBackground"
+            android:gravity="start|center_vertical"
+            app:layout_constraintStart_toEndOf="@id/txtAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtConsumer"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            android:spinnerMode="dropdown"
+            android:fontFamily="@font/lato_regular" />
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/edittext_height"
+            android:gravity="end|center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtAmount"
+            app:layout_constraintBottom_toBottomOf="@id/edtAmount"
+            android:text="@string/label_amount"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_regular"/>
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginStart="@dimen/margin_small"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_amount"
+            android:imeOptions="actionDone"
+            android:inputType="numberDecimal"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/txtAmount"
+            app:layout_constraintTop_toBottomOf="@id/edtAccount" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

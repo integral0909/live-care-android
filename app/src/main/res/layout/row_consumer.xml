@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_ssmall"
+    android:layout_marginEnd="@dimen/margin_ssmall"
+    android:background="@android:drawable/dialog_holo_light_frame"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_big"
+    android:paddingTop="@dimen/margin_normal"
+    android:paddingEnd="@dimen/margin_big"
+    android:paddingBottom="@dimen/margin_normal">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/lato_bold"
+            android:text="Robert Jackson"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtExternalKey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="External ID"
+            app:layout_constraintEnd_toEndOf="@+id/txtTitle"
+            app:layout_constraintStart_toStartOf="@+id/txtTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+        <TextView
+            android:id="@+id/txtRegion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:lines="1"
+            android:text="Region"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/font_description"
+            app:layout_constraintEnd_toEndOf="@id/txtTitle"
+            app:layout_constraintStart_toStartOf="@id/txtTitle"
+            app:layout_constraintTop_toBottomOf="@+id/txtExternalKey" />
+
+        <ImageView
+            android:id="@+id/imgAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:src="@mipmap/ic_location_pin"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/txtRegion"
+            app:layout_constraintTop_toTopOf="@id/txtAddress" />
+
+        <TextView
+            android:id="@+id/txtAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/lato_regular"
+            android:text="135 W, Park Avenue, Columbus, OH 43222"
+            android:textColor="@color/textGrayDark"
+            android:textSize="@dimen/font_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/txtTitle"
+            app:layout_constraintStart_toEndOf="@+id/imgAddress"
+            app:layout_constraintTop_toBottomOf="@id/txtRegion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgAccessory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="@dimen/margin_ssmall"
+        android:src="@mipmap/ic_right" />
+
+</LinearLayout>

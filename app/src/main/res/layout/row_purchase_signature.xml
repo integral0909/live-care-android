@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/defaultBackground"
+    android:padding="@dimen/margin_normal">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Mary Willson - Petty Cash"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_title"
+        android:fontFamily="@font/lato_bold"/>
+
+
+    <TextView
+        android:id="@+id/txtSpend"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:paddingBottom="@dimen/margin_ssmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtSpend"
+        app:layout_constraintBottom_toBottomOf="@id/edtSpend"
+        android:text="@string/label_spend"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_label"
+        android:fontFamily="@font/lato_regular"/>
+
+    <TextView
+        android:id="@+id/edtSpend"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginStart="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:gravity="start|center_vertical"
+        app:layout_constraintStart_toEndOf="@id/txtSpend"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_regular"
+        android:hint="@string/spend_amount" />
+
+    <TextView
+        android:id="@+id/txtRedeposit"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:paddingBottom="@dimen/margin_ssmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtRedeposit"
+        app:layout_constraintBottom_toBottomOf="@id/edtRedeposit"
+        android:text="@string/label_redeposit"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_label"
+        android:fontFamily="@font/lato_regular"/>
+
+    <TextView
+        android:id="@+id/edtRedeposit"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginStart="@dimen/margin_small"
+        android:gravity="start|center_vertical"
+        app:layout_constraintStart_toEndOf="@id/txtRedeposit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSpend"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_regular"
+        android:hint="@string/redeposit_amount" />
+
+    <TextView
+        android:id="@+id/txtPending"
+        android:layout_width="@dimen/label_width"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:paddingBottom="@dimen/margin_ssmall"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/edtPending"
+        app:layout_constraintBottom_toBottomOf="@id/edtPending"
+        android:text="@string/label_pending"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_label"
+        android:fontFamily="@font/lato_regular"/>
+
+    <TextView
+        android:id="@+id/edtPending"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_marginStart="@dimen/margin_small"
+        android:gravity="start|center_vertical"
+        app:layout_constraintStart_toEndOf="@id/txtPending"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtRedeposit"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_regular"
+        android:hint="@string/pending_amount" />
+
+    <LinearLayout
+        android:id="@+id/btnSignature"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:layout_marginTop="@dimen/margin_ssmall"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:background="@drawable/background_unsignature_button"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtPending">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_checkmark_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_ssmall"
+            android:fontFamily="@font/lato_bold"
+            android:text="@string/electronic_signature_of_user"
+            android:textColor="@color/buttonTextGray"
+            android:textSize="@dimen/font_normal" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

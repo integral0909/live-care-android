@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/tab_consumers"
+        android:icon="@drawable/tab_patients"
+        android:title="@string/tab_consumers" />
+
+    <item
+        android:id="@+id/tab_transactions"
+        android:icon="@drawable/tab_transactions"
+        android:title="@string/tab_transactions" />
+
+    <item
+        android:id="@+id/tab_trasportation"
+        android:icon="@drawable/tab_tasks"
+        android:title="@string/tab_transportation" />
+
+    <item
+        android:id="@+id/tab_appointment"
+        android:icon="@drawable/tab_settings"
+        android:title="@string/tab_appointments" />
+
+</menu>

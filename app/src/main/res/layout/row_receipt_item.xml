@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defaultBackground"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/margin_small"
+    android:paddingEnd="@dimen/margin_small">
+
+    <TextView
+        android:id="@+id/txtLabel"
+        android:layout_width="@dimen/label_width_small"
+        android:layout_height="@dimen/edittext_height"
+        android:fontFamily="@font/lato_regular"
+        android:text="@string/label_item_name"
+        android:gravity="center_vertical|end"
+        android:textColor="@color/textGray"
+        android:textSize="@dimen/font_label" />
+
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_weight="1"
+        android:fontFamily="@font/lato_regular"
+        android:hint="@string/enter_Item_name"
+        android:imeOptions="actionDone"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_normal" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_small"
+        android:layout_gravity="center_vertical|end"
+        android:layout_margin="@dimen/margin_sssmall"
+        android:background="@drawable/background_red_round_button"
+        android:text="@string/button_delete"
+        android:textAllCaps="false"
+        android:textColor="@color/textWhite"
+        android:textSize="@dimen/font_text_button" />
+
+</LinearLayout>

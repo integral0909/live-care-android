@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/margin_ssmall"
+    android:layout_marginEnd="@dimen/margin_ssmall"
+    android:layout_marginTop="@dimen/margin_sssmall"
+    android:layout_marginBottom="@dimen/margin_sssmall"
+    android:paddingTop="@dimen/margin_normal"
+    android:paddingBottom="@dimen/margin_normal"
+    android:paddingStart="@dimen/margin_big"
+    android:paddingEnd="@dimen/margin_big"
+    android:background="@android:drawable/dialog_holo_light_frame">
+
+    <TextView
+        android:id="@+id/txtAccount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_ssmall"
+        android:text="Petty Cash"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_bold"
+        android:fontFamily="@font/lato_bold"
+        app:layout_constraintEnd_toStartOf="@+id/txtCardNumber"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtCardNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(...2332)"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_description"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtAccount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtBalance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_huge"
+        android:layout_marginTop="@dimen/margin_ssmall"
+        android:layout_marginEnd="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_huge"
+        android:fontFamily="@font/lato_bold"
+        android:gravity="center_horizontal"
+        android:text="$12.00"
+        android:textColor="@color/textBlack"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/viewSeparatorHorizontal"
+        app:layout_constraintEnd_toStartOf="@id/txtCurrency"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtAccount" />
+
+    <TextView
+        android:id="@+id/txtCurrency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="USD"
+        android:textColor="@color/textGrayDark"
+        android:textSize="@dimen/font_description"
+        android:fontFamily="@font/lato_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txtBalance"
+        app:layout_constraintTop_toTopOf="@id/txtBalance"
+        app:layout_constraintBottom_toBottomOf="@id/txtBalance"/>
+
+    <LinearLayout
+        android:id="@+id/viewSeparatorHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_line"
+        android:layout_marginTop="@dimen/margin_ssmall"
+        android:background="@color/separator_line_gray"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtBalance" />
+
+    <LinearLayout
+        android:id="@+id/viewSeparatorVertical"
+        android:orientation="horizontal"
+        android:layout_width="@dimen/separator_line"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginStart="@dimen/margin_sssmall"
+        android:layout_marginEnd="@dimen/margin_sssmall"
+        android:layout_marginTop="@dimen/margin_sssmall"
+        android:background="@color/separator_line_gray"
+        app:layout_constraintTop_toBottomOf="@id/viewSeparatorHorizontal"
+        app:layout_constraintStart_toEndOf="@id/btnNewTransaction"
+        app:layout_constraintEnd_toStartOf="@id/btnAuditAccount"/>
+
+    <Button
+        android:id="@+id/btnNewTransaction"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:background="@drawable/background_transparent_button"
+        android:text="@string/button_new_transaction"
+        android:textColor="@color/textBlack"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewSeparatorHorizontal"
+        app:layout_constraintEnd_toStartOf="@id/viewSeparatorVertical"
+        />
+
+    <Button
+        android:id="@+id/btnAuditAccount"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/button_height"
+        android:layout_marginTop="@dimen/margin_tiny"
+        android:background="@drawable/background_transparent_button"
+        android:text="@string/button_audit_account"
+        android:textColor="@color/textBlack"
+        android:textAllCaps="false"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_bold"
+        app:layout_constraintStart_toEndOf="@id/viewSeparatorVertical"
+        app:layout_constraintTop_toTopOf="@id/btnNewTransaction"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

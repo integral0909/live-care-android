@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/tab_consumers"
+            android:icon="@drawable/tab_patients"
+            android:title="@string/tab_consumers" />
+
+        <item
+            android:id="@+id/tab_transactions"
+            android:icon="@drawable/tab_transactions"
+            android:title="@string/tab_transactions" />
+
+        <item
+            android:id="@+id/tab_trasportation"
+            android:icon="@drawable/tab_tasks"
+            android:title="@string/tab_transportation"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/tab_appointment"
+            android:icon="@drawable/tab_settings"
+            android:title="@string/tab_appointments"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/nav_message"
+            android:icon="@drawable/tab_messaging"
+            android:title="@string/menu_message"
+            android:visible="false" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_tab_logout"
+            android:title="@string/menu_logout" />
+
+    </group>
+
+</menu>

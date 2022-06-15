@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="margin_normal">16dp</dimen>
+    <dimen name="margin_small">12dp</dimen>
+    <dimen name="margin_ssmall">8dp</dimen>
+    <dimen name="margin_sssmall">4dp</dimen>
+    <dimen name="margin_tiny">2dp</dimen>
+    <dimen name="margin_big">20dp</dimen>
+    <dimen name="margin_bbig">24dp</dimen>
+    <dimen name="margin_bbbig">28dp</dimen>
+    <dimen name="margin_huge">32dp</dimen>
+
+    <dimen name="separator_line">1dp</dimen>
+    <dimen name="font_normal">15sp</dimen>
+    <dimen name="font_bold">16sp</dimen>
+    <dimen name="font_text_button">14sp</dimen>
+    <dimen name="font_title">18sp</dimen>
+    <dimen name="font_description">12sp</dimen>
+    <dimen name="font_tiny">10sp</dimen>
+    <dimen name="font_label">14sp</dimen>
+    <dimen name="font_cell_title">14sp</dimen>
+    <dimen name="font_cell_title1">13sp</dimen>
+    <dimen name="font_cell_text">12sp</dimen>
+
+    <dimen name="button_height">36dp</dimen>
+    <dimen name="button_height_small">30dp</dimen>
+    <dimen name="button_height_half">18dp</dimen>
+    <dimen name="edittext_height">36dp</dimen>
+    <dimen name="edittext_height_half">18dp</dimen>
+
+    <dimen name="label_width">100dp</dimen>
+    <dimen name="label_width_small">80dp</dimen>
+    <dimen name="label_width_big">120dp</dimen>
+
+    <dimen name="consumer_avatar_size">50dp</dimen>
+
+    <dimen name="audit_modal_width">300dp</dimen>
+    <dimen name="audit_modal_height">380dp</dimen>
+
+    <dimen name="fab1_distance">160dp</dimen>
+    <dimen name="fab2_distance">110dp</dimen>
+    <dimen name="fab3_distance">60dp</dimen>
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">11sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12sp</dimen>
+</resources>

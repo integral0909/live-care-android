@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/defaultBackground"
+    android:paddingTop="@dimen/margin_ssmall"
+    android:paddingStart="@dimen/margin_normal"
+    android:paddingEnd="@dimen/margin_normal"
+    android:paddingBottom="@dimen/margin_normal">
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height_small"
+        android:background="@drawable/background_red_round_button"
+        android:layout_marginBottom="@dimen/margin_sssmall"
+        android:text="@string/button_delete"
+        android:textSize="@dimen/font_text_button"
+        android:textAllCaps="false"
+        android:textColor="@color/textWhite"
+        android:layout_gravity="end"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtConsumer"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/edittext_height"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="end|center_vertical"
+            android:text="@string/label_consumer"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            app:layout_constraintBottom_toBottomOf="@id/edtConsumer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edtConsumer" />
+
+        <Spinner
+            android:id="@+id/edtConsumer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintStart_toEndOf="@id/txtConsumer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/defaultBackground"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_label"
+            android:spinnerMode="dropdown"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/select_a_consumer"/>
+
+        <TextView
+            android:id="@+id/txtAccount"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/edittext_height"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="end|center_vertical"
+            android:text="@string/label_account"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            app:layout_constraintBottom_toBottomOf="@id/edtAccount"
+            app:layout_constraintTop_toTopOf="@+id/edtAccount"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Spinner
+            android:id="@+id/edtAccount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginStart="@dimen/margin_small"
+            android:background="@color/defaultBackground"
+            app:layout_constraintStart_toEndOf="@id/txtAccount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtConsumer"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_label"
+            android:spinnerMode="dropdown"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_select_an_account"/>
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="@dimen/label_width"
+            android:layout_height="@dimen/edittext_height"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center_vertical|end"
+            android:text="@string/label_amount"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            app:layout_constraintBottom_toBottomOf="@+id/edtAmount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/edtAmount" />
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:layout_marginStart="@dimen/margin_small"
+            app:layout_constraintStart_toEndOf="@id/txtAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtAccount"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_enter_amount"
+            android:inputType="numberDecimal"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

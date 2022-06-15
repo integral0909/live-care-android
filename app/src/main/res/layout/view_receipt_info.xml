@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/defaultBackground">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/defaultBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="@dimen/margin_big"
+        android:paddingBottom="@dimen/margin_ssmall"
+        android:layout_marginStart="@dimen/margin_normal"
+        android:text="@string/label_enter_receipt_detail"
+        android:textSize="@dimen/font_title"
+        android:textColor="@color/textBlack"
+        android:fontFamily="@font/lato_regular"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/viewData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        android:background="@color/separator_line_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/txtAmount"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtAmount"
+            app:layout_constraintBottom_toBottomOf="@id/edtAmount"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_receipt_amount"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular" />
+
+        <EditText
+            android:id="@+id/edtAmount"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="@dimen/separator_line"
+            app:layout_constraintStart_toEndOf="@id/txtAmount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/defaultBackground"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_receipt_amount" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="@dimen/label_width_big"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/edtDate"
+            app:layout_constraintBottom_toBottomOf="@id/edtDate"
+            android:gravity="center_vertical|end"
+            android:background="@color/defaultBackground"
+            android:text="@string/label_receipt_date"
+            android:textColor="@color/textGray"
+            android:textSize="@dimen/font_label"
+            android:fontFamily="@font/lato_regular"
+            />
+
+        <EditText
+            android:id="@+id/edtDate"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/edittext_height"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="0dp"
+            android:layout_marginTop="@dimen/separator_line"
+            android:layout_marginBottom="@dimen/separator_line"
+            app:layout_constraintStart_toEndOf="@id/txtDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edtAmount"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@color/defaultBackground"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_regular"
+            android:hint="@string/hint_receipt_date"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

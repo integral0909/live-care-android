@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/modal_background">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_camera"
+        android:layout_marginTop="@dimen/margin_bbbig"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_normal"
+        android:paddingStart="@dimen/margin_huge"
+        android:paddingEnd="@dimen/margin_huge"
+        android:gravity="center_horizontal"
+        android:text="@string/please_use_camera_to_take_photo_of_cash"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_regular" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="160dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_ssmall"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:background="@color/separator_line_gray"
+        android:gravity="center_horizontal"
+        android:scaleType="center"
+        android:src="@mipmap/ic_add" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/button_cancel"
+            android:textColor="@color/textWhite"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_bold"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/button_next"
+            android:textColor="@color/textWhite"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_bold"/>
+
+    </LinearLayout>
+</LinearLayout>

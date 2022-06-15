@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#499fdd</color>
+    <color name="colorPrimaryDark">#1C76B6</color>
+    <color name="colorAccent">#0B4E7E</color>
+
+    <color name="defaultBackground">#EFF4F7</color>
+    <color name="buttonBackground">#2D5F8E</color>
+    <color name="disabledBackground">#757575</color>
+    <color name="unsignature">#FEF397</color>
+    <color name="signatured">#96DB7E</color>
+    <color name="transactionPending">#F3E7E8</color>
+
+    <color name="separator_line_white">#88FFFFFF</color>
+    <color name="separator_line_gray">#55000000</color>
+    <color name="textBlack">#000000</color>
+    <color name="textWhite">#FFFFFF</color>
+    <color name="textGrayDark">#434343</color>
+    <color name="textGray">#555555</color>
+    <color name="buttonTextGray">#333333</color>
+    <color name="buttonRed">#EF1F09</color>
+
+    <color name="tab_text">#99FFFFFF</color>
+    <color name="tab_selected_text">#FFFFFFFF</color>
+
+    <color name="modal_background">#C0DEFC</color>
+    <color name="dim_background">#88000000</color>
+
+    <color name="purple_color">#6A35F2</color>
+    <color name="SHARE_LIGHT_BLUE">#0AB9FF</color>
+</resources>

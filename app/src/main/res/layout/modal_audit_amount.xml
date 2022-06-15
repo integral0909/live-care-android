@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/modal_background"
+    android:clickable="true"
+    android:focusable="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_confirmation"
+        android:layout_marginTop="@dimen/margin_bbbig"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/audio_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_normal"
+        android:paddingStart="@dimen/margin_huge"
+        android:paddingEnd="@dimen/margin_huge"
+        android:gravity="center_horizontal"
+        android:text="@string/please_count_the_amount"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/font_normal"
+        android:fontFamily="@font/lato_regular" />
+
+    <EditText
+        android:id="@+id/edtAmount"
+        android:layout_width="150dp"
+        android:layout_height="@dimen/edittext_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_ssmall"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:gravity="center_horizontal"
+        android:hint="@string/hint_enter_amount"
+        android:textSize="@dimen/font_normal"
+        android:textColor="@color/textBlack"
+        android:fontFamily="@font/lato_regular"
+        android:inputType="numberDecimal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary"
+            android:text="@string/button_cancel"
+            android:textColor="@color/textWhite"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_bold"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_height"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/button_next"
+            android:textColor="@color/textWhite"
+            android:textAllCaps="false"
+            android:textSize="@dimen/font_normal"
+            android:fontFamily="@font/lato_bold"/>
+
+    </LinearLayout>
+</LinearLayout>
